@@ -196,7 +196,10 @@ body{
 .card_width{
     margin: 15px 0;
 }
-
+#myCarousel .item img{
+    height: 35vw;
+    object-fit: cover;
+}
 .card_width img{
     width: 100%;
     height: 15vw;
