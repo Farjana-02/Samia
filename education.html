@@ -17,88 +17,97 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
 
 <body id="education">
 <!--navigation start here-->
-<div class="container-fluid nav_des sticky-top">
-    <div class="row ">
-        <div class="offset-2 col-md-13">
-            <nav>
-                <div class="navbar navbar-expand-lg navbar-light  " style="margin-left: 40px;">
-                    <button type="button" class="navbar-toggler" 
-                            data-toggle="collapse" data-target="#nav1">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="nav1">
-
-                        <ul class="navbar-nav">
-                            <li class="active"><a href="index.html" class="nav-link" >Home</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="publication.html" class="nav-link">publication</a></li> -->
-                            <!--<li style="padding-left: 10px;"><a href="teaching.html" class="nav-link">teaching</a></li>-->
-                            <li style="padding-left: 10px;"><a href="education.html" class="navbar navbar-expand-lg navbar-dark bg-dark" >Education</a></li>
-                            <li style="padding-left: 10px;"><a href="Experience.html" class="nav-link">Experience</a></li>
-                            <li style="padding-left: 10px;"><a href="research_project.html" class="nav-link">Projects</a></li>
-                            <li style="padding-left: 10px;"><a href="affiliation.html" class="nav-link">Certifications</a></li>
-                            <li style="padding-left: 10px;"><a href="research.html" class="nav-link">Research Experience</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="accolades.html" class="nav-link">accolades</a></li>-->
-                            <li style="padding-left: 10px;"><a href="extracurricular.html" class="nav-link">Extracurricular</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="affiliation.html" class="nav-link">affiliation</a></li>-->
-                            <li style="padding-left: 10px;"><a href="skills.html" class="nav-link">Skills</a></li>
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg container">
+        <a class="site-brand" href="index.html">
+            <span class="site-brand-name">Farjana Sultana Samia</span>
+            <span class="site-brand-sub">Iowa State University</span>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#nav1"
+                aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav1">
+            <ul class="navbar-nav site-menu">
+                            <li><a class="site-menu-link" href="index.html">Home</a></li>
+                            <li class="is-active"><a class="site-menu-link" href="education.html" aria-current="page">Education</a></li>
+                            <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
+                            <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
+                            <li><a class="site-menu-link" href="research.html">Research Experience</a></li>
+                            <li><a class="site-menu-link" href="extracurricular.html">Extracurricular</a></li>
+                            <li><a class="site-menu-link" href="skills.html">Skills</a></li>
                         </ul>
-                    </div>
-                </div>
-            </nav>
-        </div></div>
-    </div>
-    <!--end navigation-->
+        </div>
+    </nav>
+</header>
+<!--end navigation-->
 
 <!--top introducing section-->
-<div class="container top_info_content">
-    <div class="row">
-        <div class="col-md-3  col-">
-            <img class="rounded-circle" src="img/final 2.jpg" height="300px" class="img-responsive">
+<section class="container hero">
+    <div class="hero-card">
+        <div class="hero-photo">
+            <img src="img/mypic.png" alt="Farjana Sultana Samia">
         </div>
-        <div class="col-md-8  col- ">
-            <div class="top_info text-justify text-center">
-                <h1>Farjana Sultana Samia</h1>
+        <div class="hero-body">
+            <p class="hero-eyebrow">Iowa State University &middot; Ames, Iowa, USA</p>
+            <h1 class="hero-name">Farjana Sultana Samia</h1>
+            <p class="hero-title">Ph.D. Student in Computer Science</p>
 
-                <h3>PhD in Computer Science, Iowa State University, Ames, Iowa, USA</h3>
-                <h4>Graduate Teaching Assistant, Iowa State University, Ames, Iowa, USA</h4>
-                <h6>Former Software Engineer(Natural Language Processing) at Technometrics Limited </h6>
-                    <h4>B.Sc at CSE, MIU</h4>
-                    <br/>
+            <div class="hero-rule"></div>
 
-                <h4>Research Interest:</h4>
-                Natural Language Processing(NLP),
-                Large Language Models(LLM's),
-                Entity Linking(EL),
-                Data Science(DS)
-               
-                <!-- Deep Learning(DL),
-                                           Machine Learning(ML),
-                                           Data Science(DS),
-                                           Natural Language Processing(NLP) -->
-                                           
-                
+            <ul class="hero-meta">
+                <li>Graduate Research Assistant, Department of Computer Science, Iowa State University</li>
+                <li>Graduate Teaching Assistant, Department of Computer Science, Iowa State University</li>
+                <li class="hero-meta-past">Former Software Engineer (Natural Language Processing), Technometrics Limited</li>
+                <li class="hero-meta-past">B.Sc. in Computer Science &amp; Engineering, Manarat International University</li>
+            </ul>
+
+            <div class="hero-interests">
+                <span class="hero-interests-label">Research Interests</span>
+                <ul class="hero-tags">
+                    <li>NLP</li>
+                    <li>LLM</li>
+                    <li>Entity Linking</li>
+                    <li>Information Extraction</li>
+                    <li>Knowledge Graphs</li>
+                    <li>Data Science</li>
+                </ul>
             </div>
 
-           <!--<div class="offset-4  col-md-8 col-">
-                <div class="elements ">
-                <a class="fa fa-github-square fa-2x"  style="color:#000;" href='https://github.com/Samia-00' title='Github'> </a> &nbsp  &nbsp
-                <a class="ai ai-google-scholar ai-2x" style="color:#000;" href='https://scholar.google.com/citations?hl=en&user=m3MlVBUAAAAJ#' title='Google Scholar'></a> &nbsp  &nbsp
-                <a class="ai ai-google-orcid ai-2x" style="color:#000;" href='https://orcid.org/0000-0002-6337-3571' title='Orcid'></a>
-                <a class="ai ai-dblp ai-2x" style="color:#000;" href='https://dblp.uni-trier.de/pers/hd/h/Hasan:Md_Mahedi' title='dblp'></a> &nbsp  &nbsp
-                <a class="ai ai-researchgate ai-2x" style="color:#000;" href='https://www.researchgate.net/profile/Md_Mahedi_Hasan4' title="ResearchGate"></a> 
-                </div>
-            </div> --> 
+            <div class="hero-actions">
+                <a class="hero-cv" href="./documents/resume_samia.pdf" target="_blank" rel="noopener">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Curriculum Vitae
+                </a>
+                <a class="hero-icon" href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                    <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-
-        <hr width="1100px;">
     </div>
-</div>
-
+</section>
 <!--end section-->
 
 
@@ -109,121 +118,104 @@
 
     <div class="row">
         <div class="col-md-12 text-justify">
-            <h4><img alt='' src='img/lister.png' width='15'/> Educations</h4>
-            
-            <br/><br/><br/>
-        <ul>
-            
-            <li class="row">
-                <div class="col-md-3">
-                    <img src="img/isu.png" class="center-block img-responsive" height="150px" weidth="150px">
-                </div>
-                <div class="col-md-9">
-            <h5 ><b>PhD in Computer Science (Jan 2024 - Present)</b></h5>
-            Iowa State University(ISU)
+            <h4><img alt='' src='img/lister.png' width='15'/> Education</h4>
             <br>
-            <b>CGPA:</b> 3.89 out of 4.00 <br>
-            <b>Relevant Courseworks: </b> COMS 5790: Natural Language Processing, COMS 6730: Advanced Topics in Machine Learning, COMS 5730:
-            Machine Learning, COMS 5110: Design and Analysis of Algorithms, COMS 5310: Theory of Computation
+        <ul class="edu-list">
+            <li class="edu-card">
+                <div class="edu-logo">
+                    <img src="img/isu.png" alt="Iowa State University">
+                </div>
+                <div class="edu-body">
+                    <h5 class="edu-degree">Ph.D. in Computer Science</h5>
+                    <p class="edu-school">Iowa State University (ISU), Ames, Iowa, USA</p>
+                    <div class="edu-meta">
+                        <span class="edu-period">Jan 2024 &ndash; Present</span>
+                        <span class="edu-grade">CGPA 3.92 / 4.00</span>
                     </div>
-            </li>
-
-        <hr/>
-        <br/><br/><br/>
-
-            <li class="row">
-                <div class="col-md-3">
-                    <img src="img/miu_.png" class="center-block img-responsive" height="150px" weidth="150px">
-                </div>
-                <div class="col-md-9">
-            <h5 ><b>B.Sc in Computer Science and Engineering (Feb 2017 - Dec 2021)</b></h5>
-            Manarat International University (MIU)
-            <br>
-            <b>CGPA:</b> 3.90 out of 4.00 <br>
-            <b>Student ID:</b> 1743CSE00584 <br>
-            <b>Thesis:</b>  Prediction of COVID-19 from Chest X-ray Images Using CNN And Pre-Trained Models<br><br>
-
-
-            <b>Relevant Courseworks: </b> Structured Programming (C), OPP (Java), Data
-Structures, Algorithms, Statistics and Probability, Database Systems,
-Operating Systems, Software Development, Computer Graphics, Software Engineering,
-Internet and Web Programming (HTML, CSS, Bootstrap, Java Script, PHP), System Analysis & Design, Computer
-Networking, VLSI, <a  href="https://github.com/Mahedi-61/Summer-2020">Artificial Intelligence</a>, Neural Networks and Fuzzy
-Systems, Pattern Recognition, <a  href="https://github.com/Mahedi-61/Summer-2020/tree/master/CSE-437">Computer Vision and Robotics</a>.<br/>
-            <br/>
+                    <div class="edu-detail">
+                        <span class="edu-label">Relevant coursework</span>
+                        <ul class="edu-courses">
+                            <li>COMS 5790: Natural Language Processing</li>
+                            <li>COMS 6730: Advanced Topics in Machine Learning</li>
+                            <li>COMS 5730: Machine Learning</li>
+                            <li>COMS 5110: Design and Analysis of Algorithms</li>
+                            <li>COMS 5310: Theory of Computation</li>
+                        </ul>
                     </div>
+                </div>
             </li>
-            <hr/>
-            <br/><br/><br/>
-            <li class="row">
-                <div class="col-md-3">
-                    <img src="img/coll_.png" class="center-block img-responsive" height="150px" weidth="150px">
+            <li class="edu-card">
+                <div class="edu-logo">
+                    <img src="img/miu_.png" alt="Manarat International University">
                 </div>
-                <div class="col-md-9">
-            <h5 ><b>Higher Secondary Certificate(HSC) </b></h5>
-            Shaheed Bir Uttam Lt. Anwar Girl's College <br>
-            <b>GPA:</b> 5.00 out of 5.00<br>
-            <br>
-            </div></li>
-            <hr/>
-             <br/><br/><br/>
-            <li class="row">
-                <div class="col-md-3">
-                    <img src="img/sch.png" class="center-block img-responsive" height="150px" weidth="150px">
+                <div class="edu-body">
+                    <h5 class="edu-degree">B.Sc. in Computer Science and Engineering</h5>
+                    <p class="edu-school">Manarat International University (MIU), Dhaka, Bangladesh</p>
+                    <div class="edu-meta">
+                        <span class="edu-period">Feb 2017 &ndash; Dec 2021</span>
+                        <span class="edu-grade">CGPA 3.90 / 4.00</span>
+                    </div>
+                    <div class="edu-detail">
+                        <span class="edu-label">Undergraduate thesis</span>
+                        Prediction of COVID-19 from Chest X-ray Images Using CNN and Pre-Trained Models
+                    </div>
+                    <div class="edu-detail">
+                        <span class="edu-label">Student ID</span>
+                        1743CSE00584
+                    </div>
+                    <div class="edu-detail">
+                        <span class="edu-label">Relevant coursework</span>
+                        <ul class="edu-courses">
+                            <li>Structured Programming (C)</li>
+                            <li>OOP (Java)</li>
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
+                            <li>Statistics and Probability</li>
+                            <li>Database Systems</li>
+                            <li>Operating Systems</li>
+                            <li>Software Development</li>
+                            <li>Computer Graphics</li>
+                            <li>Software Engineering</li>
+                            <li>Internet and Web Programming (HTML, CSS, Bootstrap, JavaScript, PHP)</li>
+                            <li>System Analysis &amp; Design</li>
+                            <li>Computer Networking</li>
+                            <li>VLSI</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Neural Networks and Fuzzy Systems</li>
+                            <li>Pattern Recognition</li>
+                            <li>Computer Vision and Robotics</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-9">
-            <h5><b>Secondary School Certificate(SSC) </b></h5>
-            Uttara High School & College<br>
-           <b> GPA: </b>5.00 out of 5.00<br>
-            </div></li>
+            </li>
+            <li class="edu-card">
+                <div class="edu-logo">
+                    <img src="img/coll_.png" alt="Shaheed Bir Uttam Lt. Anwar Girls' College">
+                </div>
+                <div class="edu-body">
+                    <h5 class="edu-degree">Higher Secondary Certificate (HSC)</h5>
+                    <p class="edu-school">Shaheed Bir Uttam Lt. Anwar Girls' College, Dhaka, Bangladesh</p>
+                    <div class="edu-meta">
+                        <span class="edu-grade">GPA 5.00 / 5.00</span>
+                    </div>
+                </div>
+            </li>
+            <li class="edu-card">
+                <div class="edu-logo">
+                    <img src="img/sch.png" alt="Uttara High School &amp; College">
+                </div>
+                <div class="edu-body">
+                    <h5 class="edu-degree">Secondary School Certificate (SSC)</h5>
+                    <p class="edu-school">Uttara High School &amp; College, Dhaka, Bangladesh</p>
+                    <div class="edu-meta">
+                        <span class="edu-grade">GPA 5.00 / 5.00</span>
+                    </div>
+                </div>
+            </li>
         </ul> <br>
         </div>
     </div>
 
-
-    <hr/>
-<div class="row contacts">
-
-    <div class="col-md-6 border-left">
-    <!-- social networks-->
-    <div class="row">
-        <div class="col-md-12">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Here I am</h4> <br>
-            <div class="col-md-4 col-">
-                <div>
-                    <a class="fa fa-linkedin-square fa-2x"  style="color:#000;" href='https://www.linkedin.com/in/farjanasultanasamia/' title='LinkedIn'></a> &nbsp  &nbsp
-                   <!-- <a class="fa fa-reddit fa-2x" style="color:#000;" href='' title='Reddit'></a> &nbsp  &nbsp-->
-                   <!--<a class="fa fa-twitter fa-2x" style="color:#000;" href='' title='Twitter'></a> &nbsp  &nbsp-->
-                    <a class="fa fa-github-square fa-2x"  style="color:#000;" href='https://github.com/Samia-00' title='Github'> </a> &nbsp  &nbsp
-                    <a class="fa fa-facebook-square fa-2x"  style="color:#000;" href='https://www.facebook.com/profile.php?id=100011271017947' title='Github'> </a> &nbsp  &nbsp
-                   <!--- <a class="ai ai-google-scholar ai-2x" style="color:#000;" href='' title='Google Scholar'></a> &nbsp  &nbsp-->
-                   <!--- <a class="ai ai-researchgate ai-2x" style="color:#000;" href='https://www.researchgate.net/profile/Farjana-Sultana-Samia' title="ResearchGate"></a> -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    </div>
-
-    <div class="col-md-6 border-left">
-    <!-- Contact-->
-    <div class="row">
-        
-        <div class="col-md-5">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Contact</h4> <br>
-            <p>
-                <b>Email:</b> samia.cse.miu@gmail.com, fssamia@iastate.edu
-                <br>
-                <address>Department of Computer Science, Iowa state University, Ames, Iowa, USA</address>
-                [Email is preferable]
-            </p>
-        </div>
-        
-    </div>
-    </div>
-
-</div>
 
 </div>
 <!--End body parts-->
@@ -238,12 +230,68 @@ Systems, Pattern Recognition, <a  href="https://github.com/Mahedi-61/Summer-2020
 
 
 <!--footer parts start -->
-<footer class="container-fluid  footer_des">
-    <div class="row">
-        <div class="col-md-12  footer_color text-decoration-none text-center">
-            <h6>
-                Copyright &copy; 2025, Farjana Sultana Samia
-            </h6>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer-grid">
+
+            <div class="footer-col-identity">
+                <p class="footer-name">Farjana Sultana Samia</p>
+                <p class="footer-tagline">
+                    Ph.D. student in Computer Science at Iowa State University, working on
+                    natural language processing, large language models and entity linking.
+                </p>
+                <div class="footer-social">
+                    <a href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100011271017947" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h2>Navigate</h2>
+                <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="Experience.html">Experience</a></li>
+                        <li><a href="research_project.html">Projects</a></li>
+                        <li><a href="affiliation.html">Certifications</a></li>
+                        <li><a href="research.html">Research Experience</a></li>
+                        <li><a href="extracurricular.html">Extracurricular</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <a href="mailto:fssamia@iastate.edu">fssamia@iastate.edu</a><br>
+                <a href="mailto:samia.cse.miu@gmail.com">samia.cse.miu@gmail.com</a>
+                <address>
+                    Department of Computer Science<br>
+                    Iowa State University<br>
+                    Ames, Iowa, USA
+                </address>
+            </div>
+
+        </div>
+
+        <div class="site-footer-bottom">
+            <p>&copy; 2026 Farjana Sultana Samia. All rights reserved.</p>
+            <a class="footer-totop" href="#">Back to top &uarr;</a>
         </div>
     </div>
 </footer>

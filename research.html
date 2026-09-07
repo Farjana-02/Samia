@@ -16,88 +16,97 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
 
 <body id="research">
 <!--navigation start here-->
-<div class="container-fluid nav_des sticky-top">
-    <div class="row ">
-        <div class="offset-2 col-md-13">
-            <nav>
-                <div class="navbar navbar-expand-lg navbar-light  " style="margin-left: 40px;">
-                    <button type="button" class="navbar-toggler" 
-                            data-toggle="collapse" data-target="#nav1">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="nav1">
-
-                        <ul class="navbar-nav">
-                            <li class="active"><a href="index.html" class="nav-link" >Home</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="publication.html" class="nav-link">publication</a></li> -->
-                            <!--<li style="padding-left: 10px;"><a href="teaching.html" class="nav-link">teaching</a></li>-->
-                            <li style="padding-left: 10px;"><a href="education.html" class="nav-link">Education</a></li>
-                            <li style="padding-left: 10px;"><a href="Experience.html" class="nav-link">Experience</a></li>
-                            <li style="padding-left: 10px;"><a href="research_project.html" class="nav-link">Projects</a></li>
-                            <li style="padding-left: 10px;"><a href="affiliation.html" class="nav-link">Certifications</a></li>
-                            <li style="padding-left: 10px;"><a href="research.html" class="navbar navbar-expand-lg navbar-dark bg-dark">Research Experience</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="accolades.html" class="nav-link">accolades</a></li>-->
-                            <li style="padding-left: 10px;"><a href="extracurricular.html" class="nav-link">Extracurricular</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="affiliation.html" class="nav-link">affiliation</a></li>-->
-                            <li style="padding-left: 10px;"><a href="skills.html" class="nav-link">Skills</a></li>
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg container">
+        <a class="site-brand" href="index.html">
+            <span class="site-brand-name">Farjana Sultana Samia</span>
+            <span class="site-brand-sub">Iowa State University</span>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#nav1"
+                aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav1">
+            <ul class="navbar-nav site-menu">
+                            <li><a class="site-menu-link" href="index.html">Home</a></li>
+                            <li><a class="site-menu-link" href="education.html">Education</a></li>
+                            <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
+                            <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
+                            <li class="is-active"><a class="site-menu-link" href="research.html" aria-current="page">Research Experience</a></li>
+                            <li><a class="site-menu-link" href="extracurricular.html">Extracurricular</a></li>
+                            <li><a class="site-menu-link" href="skills.html">Skills</a></li>
                         </ul>
-                    </div>
-                </div>
-            </nav>
-        </div></div>
-    </div>
-    <!--end navigation-->
+        </div>
+    </nav>
+</header>
+<!--end navigation-->
 
 <!--top introducing section-->
-<div class="container top_info_content">
-    <div class="row">
-        <div class="col-md-3  col-">
-            <img class="rounded-circle" src="img/final 2.jpg" height="300px" class="img-responsive">
+<section class="container hero">
+    <div class="hero-card">
+        <div class="hero-photo">
+            <img src="img/mypic.png" alt="Farjana Sultana Samia">
         </div>
-        <div class="col-md-8  col- ">
-            <div class="top_info text-justify text-center">
-                <h1>Farjana Sultana Samia</h1>
+        <div class="hero-body">
+            <p class="hero-eyebrow">Iowa State University &middot; Ames, Iowa, USA</p>
+            <h1 class="hero-name">Farjana Sultana Samia</h1>
+            <p class="hero-title">Ph.D. Student in Computer Science</p>
 
-                <h3>PhD in Computer Science, Iowa State University, Ames, Iowa, USA</h3>
-                <h4>Graduate Teaching Assistant, Iowa State University, Ames, Iowa, USA</h4>
-                <h6>Former Software Engineer(Natural Language Processing) at Technometrics Limited </h6>
-                    <h4>B.Sc at CSE, MIU</h4>
-                    <br/>
+            <div class="hero-rule"></div>
 
-                <h4>Research Interest:</h4>
-                Natural Language Processing(NLP),
-                Large Language Models(LLM's),
-                Entity Linking(EL),
-                Data Science(DS)
-               
-                <!-- Deep Learning(DL),
-                                           Machine Learning(ML),
-                                           Data Science(DS),
-                                           Natural Language Processing(NLP) -->
-                                           
-                
+            <ul class="hero-meta">
+                <li>Graduate Research Assistant, Department of Computer Science, Iowa State University</li>
+                <li>Graduate Teaching Assistant, Department of Computer Science, Iowa State University</li>
+                <li class="hero-meta-past">Former Software Engineer (Natural Language Processing), Technometrics Limited</li>
+                <li class="hero-meta-past">B.Sc. in Computer Science &amp; Engineering, Manarat International University</li>
+            </ul>
+
+            <div class="hero-interests">
+                <span class="hero-interests-label">Research Interests</span>
+                <ul class="hero-tags">
+                    <li>NLP</li>
+                    <li>LLM</li>
+                    <li>Entity Linking</li>
+                    <li>Information Extraction</li>
+                    <li>Knowledge Graphs</li>
+                    <li>Data Science</li>
+                </ul>
             </div>
 
-           <!--<div class="offset-4  col-md-8 col-">
-                <div class="elements ">
-                <a class="fa fa-github-square fa-2x"  style="color:#000;" href='https://github.com/Samia-00' title='Github'> </a> &nbsp  &nbsp
-                <a class="ai ai-google-scholar ai-2x" style="color:#000;" href='https://scholar.google.com/citations?hl=en&user=m3MlVBUAAAAJ#' title='Google Scholar'></a> &nbsp  &nbsp
-                <a class="ai ai-google-orcid ai-2x" style="color:#000;" href='https://orcid.org/0000-0002-6337-3571' title='Orcid'></a>
-                <a class="ai ai-dblp ai-2x" style="color:#000;" href='https://dblp.uni-trier.de/pers/hd/h/Hasan:Md_Mahedi' title='dblp'></a> &nbsp  &nbsp
-                <a class="ai ai-researchgate ai-2x" style="color:#000;" href='https://www.researchgate.net/profile/Md_Mahedi_Hasan4' title="ResearchGate"></a> 
-                </div>
-            </div> --> 
+            <div class="hero-actions">
+                <a class="hero-cv" href="./documents/resume_samia.pdf" target="_blank" rel="noopener">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Curriculum Vitae
+                </a>
+                <a class="hero-icon" href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                    <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-
-        <hr width="1100px;">
     </div>
-</div>
-
+</section>
 <!--end section-->
 <!--end section-->
 
@@ -109,165 +118,151 @@
 
     <div class="row">
         <div class="col-md-12 text-justify">
-        <ol >
-            <li><h6><b> Research Experience /Iowa State University </b></h6>
-                Data And Knowledge Mining Lab, Iowa State University <br>
-                <!-- <b>Advisor: </b>Professor Dr. Qi Li <br> -->
-                Collaborating research in Natural Language Processing (NLP)
-
-            </li><br><br>
-            <li>
-                <h6><b> Bangla Text Document Categorization (On Review) </b></h6>
-                
-                I am currently working on a Natural Language processing (NLP) Based reasearch work. Automatic document classification is an emerging research area in
-                the field of NLP. So that Categorization of bengali text document is in need in various sector because Bengali text contents have been growing rapidly on 
-                the Internet, news portals, blogs, websites, and so on due to the effortless usage of electronic gadgets. These content is
-                creating an enormous amount of unstructured data.An intelligent document categorization system can handle a
-                massive amount of Bengali text data in which documents can be sorted,
-                manipulated and organized expeditiously and competently. In this Categorization, I am using various Deep Learning Models and Machine Learning Models.
-               
-            </li><br>
-            <li>
-               
-                  <div class="containe" class="row">
-                   
-                    
-                        <h6><b> Prediction of COVID-19 from Chest X-ray Images Using CNN And Pre-Trained Models (Undergraduate Thesis)</b></h6>
-                        
-                        
-                        COVID-19 infected patients show
-                        abnormalities in chest X-ray images. However, examining the chest X-rays requires a specialist with
-                        high experience. Hence, using deep learning techniques in detecting abnormalities in the X-ray
-                        images is presented commonly as a potential solution to help diagnose the disease. Numerous researchers have already been approached various techniques on the 
-                        COVID-19 chest X-ray images. Here, I have  trained seven pre-trained  models on the COVID-19 chest X-ray dataset. Seven pre-trained models are: <br> <br>
-                        <div class="text-center">
-                            <img src="img/norm.png" class="img-responsive"  >
-                        </div>
-                        
-                                • Visual Geometry Group(VGG16)<br>
-                                • Residual Neural network (ResNet50)<br>
-                                • Inception Version 3 (InceptionV3)<br>
-                                • Efficient Network (EfficientNetB0)<br>
-                                • Neural Architecture Search Network Mobile (NasNetMobile)<br>
-                                • Visual Geometry Group (VGG19)<br>
-                                • Dense Network (DenseNet201)<br> <br>
-                                  
-                  </div>             
-           <br>
-
-            
-       
-        
-         
-               
-                  <div class="containe" class="row">
-                   
-                    <div class="col-md-11 text-justify">
-                        
-                        
-                             <img alt='' src='img/acc.png'  width='100%' class="img-responsive" /> 
-                            
-                    </div>  
-                   
-                     <br>  
-                        
-                       
-                            <div class="text-center">
-                                <h6><b> Analysis </b></h6> 
-                            • We got the best accuracy result from VGG16. <br><br>
-                            • VGG16 accuracy is 0.9767  <br> <br>
-                            • and we got the lowest accuracy from the <br> <br>
-                            • Pre-trained CNN model EfficientNetB0.<br> <br>
-                            • Lowest accuracy of EfficientNetB0 is 0.5000.
-                            <br>
-                        </div>
-                          
-                                 
-                                
-                            
-                    
-                                
-                                   
-                                  
-                  </div>             
-            </li><br>
-
-            
-        </ol>
-       
-
-       <br> <br>
-       <div class="containe" class="text-center">  
-       <img src="img/res1.png" style="width: 100%"  class="img-responsive"> </div><br><br>
-          <div class="text-center">
-          • VGG16 which is best acuracy model's Confusion matrix.<br>
-          • VGG16  model's accuracy is 98%.<br>
-          • 8 normal case which is misclassified as COVID-19 patient. <br>
-          • 6 COVID-19 patients misclassified as a Normal case.<br>
-
-        </div><br>
-
-        <div class="text-center">
-
-        •I have done this Thesis under the supervision of 
-        <a href="http://cse.manarat.ac.bd/faculty/naimul-haque" class=""> Naimul Haque </a> sir.
-    </div>
-
-      
-        
-            
- 
-         
-        <br> <br>
-
+            <h4><img alt='' src='img/lister.png' width='15'/> Research Overview</h4>
+            <br>
+            <p class="research-lead">
+                My research is in natural language processing, focused on connecting unstructured text to
+                structured knowledge. I work on entity linking, information extraction and knowledge graphs,
+                and on using large language models to reduce the cost of building labeled data for specialized
+                scientific domains. This work is carried out in the Data and Knowledge Mining Lab at Iowa State
+                University, advised by <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Dr. Qi Li</a>.
+            </p>
+            <br>
+            <h4><img alt='' src='img/lister.png' width='15'/> Publications</h4>
+            <br>
+        <ul class="proj-list">
+            <li class="proj-card proj-card-featured">
+                <div class="proj-head">
+                    <h5 class="proj-title">Bridging Lexical Divergence: LLM-Assisted, Cost-Efficient,
+                        Zero-shot Scientific Entity Linking</h5>
+                    <div class="proj-links">
+                        <a class="proj-link proj-link-demo" href="https://arxiv.org/pdf/2609.00228" target="_blank" rel="noopener">
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a>
+                        <a class="proj-link" href="https://arxiv.org/abs/2609.00228" target="_blank" rel="noopener">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> arXiv</a>
+                    </div>
+                </div>
+                <p class="pub-authors">
+                    Md Rasel Khondokar, Qiao Qiao, <span class="pub-me">Farjana Sultana Samia</span>,
+                    Nhat Le, Yuepei Li, Qi Li
+                </p>
+                <span class="pub-venue">Findings of EMNLP 2026</span>
+                <ul class="exp-bullets" style="margin-top: 1.15rem;">
+                    <li>Introduces <b>Sci-ZSEL</b>, a zero-shot entity linking framework that generates entity
+                        aliases with large language models, filters noisy generations, and builds pseudo-labeled
+                        training data without any human annotation.</li>
+                    <li>Targets the low lexical overlap between mentions and entity names in scientific text,
+                        where general-domain linking models transfer poorly.</li>
+                    <li>Contributes a new animal science entity linking benchmark grounded in three livestock
+                        trait ontologies, with evaluation across five datasets.</li>
+                </ul>
+                <div class="exp-block">
+                    <span class="exp-label">My contribution</span>
+                    Built the pseudo-labeled data construction and filtering pipeline, which produces training
+                    data for fine-tuning without any human annotation.
+                </div>
+                <div class="exp-block">
+                    <span class="exp-label">Topics</span>
+                    <ul class="exp-tags">
+                        <li>Entity linking</li>
+                        <li>Zero-shot learning</li>
+                        <li>Large language models</li>
+                        <li>Scientific text</li>
+                        <li>Ontologies</li>
+                        <li>Pseudo-labeling</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+            <br>
+            <h4><img alt='' src='img/lister.png' width='15'/> Current Research</h4>
+            <br>
+        <ul class="proj-list">
+            <li class="proj-card">
+                <div class="proj-head">
+                    <h5 class="proj-title">Natural Language Processing &mdash; Data and Knowledge Mining Lab,
+                        Iowa State University</h5>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Linking mentions in scientific and biomedical text to entities in structured knowledge
+                        bases and domain ontologies.</li>
+                    <li>Relation extraction &mdash; identifying and classifying the relations that hold
+                        between entities mentioned in scientific literature.</li>
+                    <li>Information extraction and knowledge graph construction from unstructured literature.</li>
+                    <li>Zero-shot and low-supervision methods that use large language models in place of manual
+                        annotation.</li>
+                    <li>Retrieval-augmented generation and retrieval over knowledge-intensive text.</li>
+                </ul>
+                <div class="exp-block">
+                    <span class="exp-label">Topics</span>
+                    <ul class="exp-tags">
+                        <li>NLP</li>
+                        <li>LLM</li>
+                        <li>Entity linking</li>
+                        <li>Relation extraction</li>
+                        <li>Information extraction</li>
+                        <li>Knowledge graphs</li>
+                        <li>Retrieval-augmented generation</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+            <br>
+            <h4><img alt='' src='img/lister.png' width='15'/> Previous Research</h4>
+            <br>
+        <ul class="proj-list">
+            <li class="proj-card">
+                <div class="proj-head">
+                    <h5 class="proj-title">Prediction of COVID-19 from Chest X-ray Images Using CNN and
+                        Pre-Trained Models</h5>
+                    <div class="proj-links">
+                        <span class="proj-link">Undergraduate thesis</span>
+                    </div>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Trained and compared seven pre-trained convolutional architectures on a COVID-19 chest
+                        X-ray dataset: VGG16, VGG19, ResNet50, InceptionV3, EfficientNetB0, NASNetMobile and
+                        DenseNet201.</li>
+                    <li>VGG16 performed best at 97.67% accuracy; EfficientNetB0 performed worst at 50.00%.</li>
+                    <li>On the VGG16 confusion matrix, 8 normal cases were misclassified as COVID-19 and
+                        6 COVID-19 cases were misclassified as normal.</li>
+                </ul>
+                <div class="exp-block">
+                    <span class="exp-label">Topics</span>
+                    <ul class="exp-tags">
+                        <li>Medical imaging</li>
+                        <li>Transfer learning</li>
+                        <li>CNN</li>
+                        <li>Image classification</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="proj-card">
+                <div class="proj-head">
+                    <h5 class="proj-title">Bangla Text Document Categorization</h5>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Automatic categorization of Bengali-language documents, motivated by the rapid growth of
+                        Bengali text on news portals, blogs and websites and the volume of unstructured data it
+                        produces.</li>
+                    <li>Compared a range of machine learning and deep learning models for sorting and organizing
+                        large Bengali document collections.</li>
+                </ul>
+                <div class="exp-block">
+                    <span class="exp-label">Topics</span>
+                    <ul class="exp-tags">
+                        <li>Bengali NLP</li>
+                        <li>Document classification</li>
+                        <li>Deep learning</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <br>
        </div>
     </div>
 
 
-
-    <hr/>
-<div class="row contacts">
-
-    <div class="col-md-6 border-left">
-    <!-- social networks-->
-    <div class="row">
-        <div class="col-md-12">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Here I am</h4> <br>
-            <div class="col-md-4 col-">
-                <div>
-                    <a class="fa fa-linkedin-square fa-2x"  style="color:#000;" href='https://www.linkedin.com/in/farjanasultanasamia/' title='LinkedIn'></a> &nbsp  &nbsp
-                   <!-- <a class="fa fa-reddit fa-2x" style="color:#000;" href='' title='Reddit'></a> &nbsp  &nbsp-->
-                   <!--<a class="fa fa-twitter fa-2x" style="color:#000;" href='' title='Twitter'></a> &nbsp  &nbsp-->
-                    <a class="fa fa-github-square fa-2x"  style="color:#000;" href='https://github.com/Samia-00' title='Github'> </a> &nbsp  &nbsp
-                    <a class="fa fa-facebook-square fa-2x"  style="color:#000;" href='https://www.facebook.com/profile.php?id=100011271017947' title='Github'> </a> &nbsp  &nbsp
-                   <!--- <a class="ai ai-google-scholar ai-2x" style="color:#000;" href='' title='Google Scholar'></a> &nbsp  &nbsp-->
-                   <!--- <a class="ai ai-researchgate ai-2x" style="color:#000;" href='https://www.researchgate.net/profile/Farjana-Sultana-Samia' title="ResearchGate"></a> -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    </div>
-
-    <div class="col-md-6 border-left">
-    <!-- Contact-->
-    <div class="row">
-        
-        <div class="col-md-5">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Contact</h4> <br>
-            <p>
-                <b>Email:</b> samia.cse.miu@gmail.com, fssamia@iastate.edu
-                <br>
-                <address>Department of Computer Science, Iowa state University, Ames, Iowa, USA</address>
-                [Email is preferable]
-            </p>
-        </div>
-        
-    </div>
-    </div>
-
-</div>
 
 </div>
 <!--End body parts-->
@@ -282,12 +277,68 @@
 
 
 <!--footer parts start -->
-<footer class="container-fluid  footer_des">
-    <div class="row">
-        <div class="col-md-12  footer_color text-decoration-none text-center">
-            <h6>
-                Copyright &copy; 2025, Farjana Sultana Samia
-            </h6>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer-grid">
+
+            <div class="footer-col-identity">
+                <p class="footer-name">Farjana Sultana Samia</p>
+                <p class="footer-tagline">
+                    Ph.D. student in Computer Science at Iowa State University, working on
+                    natural language processing, large language models and entity linking.
+                </p>
+                <div class="footer-social">
+                    <a href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100011271017947" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h2>Navigate</h2>
+                <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="Experience.html">Experience</a></li>
+                        <li><a href="research_project.html">Projects</a></li>
+                        <li><a href="affiliation.html">Certifications</a></li>
+                        <li><a href="research.html">Research Experience</a></li>
+                        <li><a href="extracurricular.html">Extracurricular</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <a href="mailto:fssamia@iastate.edu">fssamia@iastate.edu</a><br>
+                <a href="mailto:samia.cse.miu@gmail.com">samia.cse.miu@gmail.com</a>
+                <address>
+                    Department of Computer Science<br>
+                    Iowa State University<br>
+                    Ames, Iowa, USA
+                </address>
+            </div>
+
+        </div>
+
+        <div class="site-footer-bottom">
+            <p>&copy; 2026 Farjana Sultana Samia. All rights reserved.</p>
+            <a class="footer-totop" href="#">Back to top &uarr;</a>
         </div>
     </div>
 </footer>

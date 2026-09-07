@@ -16,88 +16,97 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
 
 <body id="index">
 <!--navigation start here-->
-<div class="container-fluid nav_des sticky-top">
-    <div class="row ">
-        <div class="offset-2 col-md-13">
-            <nav>
-                <div class="navbar navbar-expand-lg navbar-light  " style="margin-left: 40px;">
-                    <button type="button" class="navbar-toggler" 
-                            data-toggle="collapse" data-target="#nav1">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="nav1">
-
-                        <ul class="navbar-nav">
-                            <li class="active"><a href="index.html" class="navbar navbar-expand-lg navbar-dark bg-dark">Home</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="publication.html" class="nav-link">publication</a></li> -->
-                            <!--<li style="padding-left: 10px;"><a href="teaching.html" class="nav-link">teaching</a></li>-->
-                            <li style="padding-left: 10px;"><a href="education.html" class="nav-link">Education</a></li>
-                            <li style="padding-left: 10px;"><a href="Experience.html" class="nav-link">Experience</a></li>
-                            <li style="padding-left: 10px;"><a href="research_project.html" class="nav-link">Projects</a></li>
-                            <li style="padding-left: 10px;"><a href="affiliation.html" class="nav-link">Certifications</a></li>
-                            <li style="padding-left: 10px;"><a href="research.html" class="nav-link">Research Experience</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="accolades.html" class="nav-link">accolades</a></li>-->
-                            <li style="padding-left: 10px;"><a href="extracurricular.html" class="nav-link">Extracurricular</a></li>
-                            <!-- <li style="padding-left: 10px;"><a href="affiliation.html" class="nav-link">affiliation</a></li>-->
-                            <li style="padding-left: 10px;"><a href="skills.html" class="nav-link">Skills</a></li>
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg container">
+        <a class="site-brand" href="index.html">
+            <span class="site-brand-name">Farjana Sultana Samia</span>
+            <span class="site-brand-sub">Iowa State University</span>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#nav1"
+                aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav1">
+            <ul class="navbar-nav site-menu">
+                            <li class="is-active"><a class="site-menu-link" href="index.html" aria-current="page">Home</a></li>
+                            <li><a class="site-menu-link" href="education.html">Education</a></li>
+                            <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
+                            <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
+                            <li><a class="site-menu-link" href="research.html">Research Experience</a></li>
+                            <li><a class="site-menu-link" href="extracurricular.html">Extracurricular</a></li>
+                            <li><a class="site-menu-link" href="skills.html">Skills</a></li>
                         </ul>
-                    </div>
-                </div>
-            </nav>
-        </div></div>
-    </div>
-    <!--end navigation-->
+        </div>
+    </nav>
+</header>
+<!--end navigation-->
 
 <!--top introducing section-->
-<div class="container top_info_content">
-    <div class="row">
-        <div class="col-md-3  col-">
-            <img class="rounded-circle" src="img/final 2.jpg" height="300px" class="img-responsive">
+<section class="container hero">
+    <div class="hero-card">
+        <div class="hero-photo">
+            <img src="img/mypic.png" alt="Farjana Sultana Samia">
         </div>
-        <div class="col-md-8  col- ">
-            <div class="top_info text-justify text-center">
-                <h1>Farjana Sultana Samia</h1>
+        <div class="hero-body">
+            <p class="hero-eyebrow">Iowa State University &middot; Ames, Iowa, USA</p>
+            <h1 class="hero-name">Farjana Sultana Samia</h1>
+            <p class="hero-title">Ph.D. Student in Computer Science</p>
 
-                <h3>PhD in Computer Science, Iowa State University, Ames, Iowa, USA</h3>
-                <h4>Graduate Teaching Assistant, Iowa State University, Ames, Iowa, USA</h4>
-                <h6>Former Software Engineer(Natural Language Processing) at Technometrics Limited </h6>
-                    <h4>B.Sc at CSE, MIU</h4>
-                    <br/>
+            <div class="hero-rule"></div>
 
-                <h4>Research Interest:</h4>
-                Natural Language Processing(NLP),
-                Large Language Models(LLM's),
-                Entity Linking(EL),
-                Data Science(DS)
-               
-                <!-- Deep Learning(DL),
-                                           Machine Learning(ML),
-                                           Data Science(DS),
-                                           Natural Language Processing(NLP) -->
-                                           
-                
+            <ul class="hero-meta">
+                <li>Graduate Research Assistant, Department of Computer Science, Iowa State University</li>
+                <li>Graduate Teaching Assistant, Department of Computer Science, Iowa State University</li>
+                <li class="hero-meta-past">Former Software Engineer (Natural Language Processing), Technometrics Limited</li>
+                <li class="hero-meta-past">B.Sc. in Computer Science &amp; Engineering, Manarat International University</li>
+            </ul>
+
+            <div class="hero-interests">
+                <span class="hero-interests-label">Research Interests</span>
+                <ul class="hero-tags">
+                    <li>NLP</li>
+                    <li>LLM</li>
+                    <li>Entity Linking</li>
+                    <li>Information Extraction</li>
+                    <li>Knowledge Graphs</li>
+                    <li>Data Science</li>
+                </ul>
             </div>
 
-           <!--<div class="offset-4  col-md-8 col-">
-                <div class="elements ">
-                <a class="fa fa-github-square fa-2x"  style="color:#000;" href='https://github.com/Samia-00' title='Github'> </a> &nbsp  &nbsp
-                <a class="ai ai-google-scholar ai-2x" style="color:#000;" href='https://scholar.google.com/citations?hl=en&user=m3MlVBUAAAAJ#' title='Google Scholar'></a> &nbsp  &nbsp
-                <a class="ai ai-google-orcid ai-2x" style="color:#000;" href='https://orcid.org/0000-0002-6337-3571' title='Orcid'></a>
-                <a class="ai ai-dblp ai-2x" style="color:#000;" href='https://dblp.uni-trier.de/pers/hd/h/Hasan:Md_Mahedi' title='dblp'></a> &nbsp  &nbsp
-                <a class="ai ai-researchgate ai-2x" style="color:#000;" href='https://www.researchgate.net/profile/Md_Mahedi_Hasan4' title="ResearchGate"></a> 
-                </div>
-            </div> --> 
+            <div class="hero-actions">
+                <a class="hero-cv" href="./documents/resume_samia.pdf" target="_blank" rel="noopener">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Curriculum Vitae
+                </a>
+                <a class="hero-icon" href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                    <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a class="hero-icon" href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-
-        <hr width="1100px;">
     </div>
-</div>
-
+</section>
 <!--end section-->
 
 
@@ -112,42 +121,36 @@
         <div class="col-md-12 text-justify">
             <h4><img alt='' src='img/lister.png' width='15'  /> Introduction </h4>
             <br>
-            <h5>
-                <i>
-                    <!-- <p>
-                        I am a Ph.D. student in Computer Science at <a href="https://www.iastate.edu/">Iowa State University</a>, specializing in Machine Learning and Natural Language Processing (NLP). Currently, I am conducting research in NLP under the supervision of <b>Professor Dr. Qi Li</b>. Previously, as a Software Engineer in NLP at Technometrics Limited (Dhaka, Bangladesh), I worked on developing state-of-the-art models, including Bengali multi-label topic classification and aspect-based sentiment analysis. My passion lies in AI research, particularly ML,DL,NLP and its applications in language understanding and data science.
-                    </p> -->
-                    <p>
-                        I am a Ph.D. student in Computer Science at <a href="https://www.iastate.edu/">Iowa State University</a>, specializing in Machine Learning and Natural Language Processing (NLP). Currently, I am conducting research in NLP focusing on LLM, Information Retrival, Knowledge graph, Entity Linking, Retrieval-Augmented Generation(RAG). Previously, as a Software Engineer in NLP at Technometrics Limited (Dhaka, Bangladesh), I worked on developing state-of-the-art models, including Bengali multi-label topic classification and aspect-based sentiment analysis. My passion lies in AI research, particularly ML,DL,NLP and its applications in language understanding and data science.
-                    </p>
-                </i>
-            </h5>
-                         </p>.
-             </i></h5>
+            <div class="intro-text">
+                <p>
+                    I am a Ph.D. student in the Department of Computer Science at
+                    <a href="https://www.cs.iastate.edu/people/farjana-sultana-samia" target="_blank" rel="noopener">Iowa State University</a>,
+                    where I work as a Graduate Research Assistant in the Data and Knowledge Mining Lab under the
+                    supervision of <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Dr. Qi Li</a>, Associate
+                    Professor of Computer Science.
+                </p>
+                <p>
+                    My research lies at the intersection of natural language processing and knowledge
+                    representation. I work on entity linking, information extraction and knowledge graphs, and on
+                    using large language models to retrieve and reason over scientific and biomedical text &mdash;
+                    with a particular interest in methods that generalize to new domains with little or no
+                    task-specific supervision. I currently contribute to an NSF-funded research project in this
+                    area.
+                </p>
+                <p>
+                    Before beginning my doctorate, I was a Software Engineer in natural language processing at
+                    Technometrics Limited in Dhaka, Bangladesh, where I built Bengali multi-label topic
+                    classification and aspect-based sentiment analysis systems. My work in this line of research
+                    has been published at the Conference on Empirical Methods in Natural Language Processing
+                    (EMNLP).
+                </p>
+            </div>
         </div>
     </div>
     <br/>
 
     <!-- social networks-->
     
-
-    <!-- Others-->
-    <div class="row">
-        <div class="col-md-12">
-            <h4><img alt='' src='img/lister.png' width='15'/> Curriculum Vitae(CV)</h4> <br>
-            <div class="col-md-12 col-">
-                <div class="elements ">
-                    <ul>
-<!--                        <li><h5><i><a style="color:#000;" href="./documents/resume of Farjana Sultana Samia.pdf">Click to Download CV</a></i></h5></li>-->
-                        <li><h5><i><a style="color:#000;" href="./documents/resume_samia.pdf">Click to Download CV</a></i></h5></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
 
 <!--photo Gallery  -->
     <div class="row">
@@ -159,8 +162,7 @@
     <br>
 
 <div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
+    <div id="myCarousel" class="carousel slide gallery-frame" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -177,128 +179,100 @@
             <li data-target="#myCarousel" data-slide-to="12"></li>
             <li data-target="#myCarousel" data-slide-to="13"></li>
         </ol>
-
-        <!-- Wrapper for slides -->
         <div class="carousel-inner">
-
-            
             <div class="carousel-item active">
-                <img src="img/dept_img.jpeg" alt="Undergraduate Thesis Defence 2022" style="width:100%;">
+                <img src="img/dept_img.jpeg" alt="ISU CS DEPARTMENT">
                 <div class="carousel-caption">
                     <h3>ISU CS DEPARTMENT</h3>
-                    <!--          <p>LA is always so much fun!</p>-->
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="img/5.jpeg" alt="CSE Gala Dinner" style="width:100%;">
+                <img src="img/5.jpeg" alt="Iowa State University">
                 <div class="carousel-caption">
                     <h3>Iowa State University</h3>
-                    <!--          <p>Thank you, Chicago!</p>-->
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="img/3.jpeg" alt="Batch Tour" style="width:100%;">
+                <img src="img/3.jpeg" alt="Iowa State University">
                 <div class="carousel-caption">
                     <h3>Iowa State University</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
                 </div>
             </div>
-
-
             <div class="carousel-item">
-                <img src="img/6.jpeg" alt="Bichanakandi (Sylhet Tour)" style="width:100%;">
+                <img src="img/6.jpeg" alt="Iowa State University">
                 <div class="carousel-caption">
                     <h3>Iowa State University</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="img/8.jpeg" alt="Bichanakandi (Sylhet Tour)" style="width:100%;">
+                <img src="img/cy2.jpeg" alt="Taking the World by Cyclone  Iowa State University">
                 <div class="carousel-caption">
-                    <h3>Iowa State University</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
+                    <h3>Taking the World by Cyclone &mdash; Iowa State University</h3>
                 </div>
             </div>
-
-            <div class="carousel-item">
-                <img src="img/10.jpeg" alt="Project Team Work At MIU Library" style="width:100%;">
+            <div class="carousel-item is-portrait">
+                <img src="img/cy5.jpeg" alt="Research presentation, Iowa State University">
+                <div class="carousel-caption">
+                    <h3>Research presentation, Iowa State University</h3>
+                </div>
+            </div>
+            <div class="carousel-item is-portrait">
+                <img src="img/10.jpeg" alt="Project Team Work At MIU Library">
                 <div class="carousel-caption">
                     <h3>Project Team Work At MIU Library</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
                 </div>
             </div>
-
+            <div class="carousel-item is-portrait">
+                <img src="img/11.jpeg" alt="Iowa State University">
+                <div class="carousel-caption">
+                    <h3>Iowa State University</h3>
+                </div>
+            </div>
             <div class="carousel-item">
-                <img src="img/11.jpeg" alt="Poster" style="width:100%;">
+                <img src="img/cy3.jpeg" alt="Holiday celebration, Iowa State University">
                 <div class="carousel-caption">
-                    <h3> Iowa State University</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
+                    <h3>Holiday celebration, Iowa State University</h3>
                 </div>
             </div>
-
-
+            <div class="carousel-item is-portrait">
+                <img src="img/cy4.jpeg" alt="With a colleague, Iowa State University">
+                <div class="carousel-caption">
+                    <h3>With a colleague, Iowa State University</h3>
+                </div>
+            </div>
             <div class="carousel-item">
-                <img src="img/idea contest day.jpg" alt="Idea Contest 2019" style="width:100%;">
+                <img src="img/contest2.jpg" alt="Girls Programming Contest 2018 (Participation)">
                 <div class="carousel-caption">
-                    <h3> Idea Contest 2019</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
+                    <h3>Girls&rsquo; Programming Contest 2018 (Participation)</h3>
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="img/contest2.jpg" alt=" Girl's Programming Contest-2018 (Perticipation)" style="width:100%;">
+                <img src="img/contest1.jpg" alt="Programming Contest (Team-MIU WARRIOR)">
                 <div class="carousel-caption">
-                    <h3> Girl's Programming Contest-2018 (Perticipation)</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
+                    <h3>Programming Contest (Team-MIU WARRIOR)</h3>
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="img/contest1.jpg" alt=" Girl's Programming Contest-2018 (Perticipation)" style="width:100%;">
+                <img src="img/tml-img-1.jpeg" alt="Colleagues farewell at Technometrics">
                 <div class="carousel-caption">
-                    <h3> Programming Contest (Team-MIU WARRIOR)</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
+                    <h3>Colleagues farewell at Technometrics</h3>
                 </div>
             </div>
-
-                        <div class="carousel-item">
-                <img src="img/tml-img-1.jpeg" alt=" Colleagues farewell at Technometrics" style="width:100%;">
+            <div class="carousel-item">
+                <img src="img/tml-img-2.jpeg" alt="With my Team">
                 <div class="carousel-caption">
-                    <h3> Colleagues farewell at Technometrics</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
+                    <h3>With my Team</h3>
                 </div>
             </div>
-
-                        <div class="carousel-item">
-                <img src="img/tml-img-2.jpeg" alt="With my Team " style="width:100%;">
-                <div class="carousel-caption">
-                    <h3> With my Team</h3>
-                    <!--          <p>We love the Big Apple!</p>-->
-                </div>
-            </div>
-
-                        <div class="carousel-item">
-                <img src="img/tml-img-3.jpeg" alt="Joining day" style="width:100%;">
-                <div class="carousel-caption">
-                    <h3> Joining day </h3>
-                    <!--          <p>We love the Big Apple!</p>-->
-                </div>
-            </div>
-
         </div>
-
-        <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="gallery-ctrl-icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
             <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="gallery-ctrl-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
             <span class="sr-only">Next</span>
-          </a>
+        </a>
     </div>
 </div>
 <!--    end photo Gallery  -->
@@ -308,62 +282,36 @@
     <div class="row">
         <div class="col-md-12">
             <h4><img alt='' src='img/lister.png' width='15'  /> My Interests</h4> <br>
-        <div class="row interest">
-                <div class="col-md-2 col-sm-4 inter_part background "> <img src="img/mug-hot-solid.svg">  <h5>tea</h5></div>    
-                <div class="col-md-2 col-sm-4 inter_part "> <img src="img/code-solid.svg" ><h5>coding</h5></div>
-                <div class="col-md-2 col-sm-4 inter_part background"> <img src="img/book-reader-solid.svg" ><h5>reading</h5></div>
-                <div class="col-md-2 col-sm-4 inter_part "> <img src="img/plane-solid.svg" > <h5>traveling</h5></div>
-                <div class="col-md-2 col-sm-4 inter_part background"> <img src="img/film-svgrepo-com.svg" ><h5>Movies</h5> </div>
-                <div class="col-md-2 col-sm-4 inter_part  "> <img src="img/research.svg">  <h5>Research</h5></div> 
-        </div>
-        </div>
-    </div>
-    </br>
-    </br>
-
-    <hr/>
-<div class="row contacts">
-
-    <div class="col-md-6 border-left">
-    <!-- social networks-->
-    <div class="row">
-        <div class="col-md-12">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Here I am</h4> <br>
-            <div class="col-md-4 col-">
-                <div>
-                    <a class="fa fa-linkedin-square fa-2x"  style="color:#000;" href='https://www.linkedin.com/in/farjanasultanasamia/' title='LinkedIn'></a> &nbsp  &nbsp
-                   <!-- <a class="fa fa-reddit fa-2x" style="color:#000;" href='' title='Reddit'></a> &nbsp  &nbsp-->
-                   <!--<a class="fa fa-twitter fa-2x" style="color:#000;" href='' title='Twitter'></a> &nbsp  &nbsp-->
-                    <a class="fa fa-github-square fa-2x"  style="color:#000;" href='https://github.com/Samia-00' title='Github'> </a> &nbsp  &nbsp
-                    <a class="fa fa-facebook-square fa-2x"  style="color:#000;" href='https://www.facebook.com/profile.php?id=100011271017947' title='Github'> </a> &nbsp  &nbsp
-                   <!--- <a class="ai ai-google-scholar ai-2x" style="color:#000;" href='' title='Google Scholar'></a> &nbsp  &nbsp-->
-                   <!--- <a class="ai ai-researchgate ai-2x" style="color:#000;" href='https://www.researchgate.net/profile/Farjana-Sultana-Samia' title="ResearchGate"></a> -->
-                </div>
+        <div class="interests-grid">
+            <div class="interest-card">
+                <div class="interest-icon"><img src="img/mug-hot-solid.svg" alt=""></div>
+                <span>Tea</span>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon"><img src="img/code-solid.svg" alt=""></div>
+                <span>Coding</span>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon"><img src="img/book-reader-solid.svg" alt=""></div>
+                <span>Reading</span>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon"><img src="img/plane-solid.svg" alt=""></div>
+                <span>Traveling</span>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon"><img src="img/film-svgrepo-com.svg" alt=""></div>
+                <span>Movies</span>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon"><img src="img/research.svg" alt=""></div>
+                <span>Research</span>
             </div>
         </div>
-    </div>
-    <br>
-    <br>
-    </div>
-
-    <div class="col-md-6 border-left">
-    <!-- Contact-->
-    <div class="row">
-        
-        <div class="col-md-5">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Contact</h4> <br>
-            <p>
-                <b>Email:</b> samia.cse.miu@gmail.com, fssamia@iastate.edu
-                <br>
-                <address>Department of Computer Science, Iowa state University, Ames, Iowa, USA</address>
-                [Email is preferable]
-            </p>
         </div>
-        
     </div>
-    </div>
-
-</div>
+    </br>
+    </br>
 
 </div>
 <!--End body parts-->
@@ -378,12 +326,68 @@
 
 
 <!--footer parts start -->
-<footer class="container-fluid  footer_des">
-    <div class="row">
-        <div class="col-md-12  footer_color text-decoration-none text-center">
-            <h6>
-                Copyright &copy; 2025, Farjana Sultana Samia
-            </h6>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer-grid">
+
+            <div class="footer-col-identity">
+                <p class="footer-name">Farjana Sultana Samia</p>
+                <p class="footer-tagline">
+                    Ph.D. student in Computer Science at Iowa State University, working on
+                    natural language processing, large language models and entity linking.
+                </p>
+                <div class="footer-social">
+                    <a href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100011271017947" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h2>Navigate</h2>
+                <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="Experience.html">Experience</a></li>
+                        <li><a href="research_project.html">Projects</a></li>
+                        <li><a href="affiliation.html">Certifications</a></li>
+                        <li><a href="research.html">Research Experience</a></li>
+                        <li><a href="extracurricular.html">Extracurricular</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <a href="mailto:fssamia@iastate.edu">fssamia@iastate.edu</a><br>
+                <a href="mailto:samia.cse.miu@gmail.com">samia.cse.miu@gmail.com</a>
+                <address>
+                    Department of Computer Science<br>
+                    Iowa State University<br>
+                    Ames, Iowa, USA
+                </address>
+            </div>
+
+        </div>
+
+        <div class="site-footer-bottom">
+            <p>&copy; 2026 Farjana Sultana Samia. All rights reserved.</p>
+            <a class="footer-totop" href="#">Back to top &uarr;</a>
         </div>
     </div>
 </footer>
