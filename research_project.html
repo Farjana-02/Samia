@@ -44,7 +44,7 @@
                             <li><a class="site-menu-link" href="research.html">Research Experience</a></li>
                             <li class="is-active"><a class="site-menu-link" href="research_project.html" aria-current="page">Projects</a></li>
                             <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
-                            <li><a class="site-menu-link" href="extracurricular.html">Extracurricular</a></li>
+                            <li><a class="site-menu-link" href="extracurricular.html">Outreach</a></li>
                             <li><a class="site-menu-link" href="skills.html">Skills</a></li>
                         </ul>
         </div>
@@ -115,7 +115,7 @@
 
     <div class="row">
         <div class="col-md-12 text-justify">
-            <h4><img alt='' src='img/lister.png' width='15'/> Featured Project</h4>
+            <h4><img alt='' src='img/lister.png' width='15'/> Featured Projects</h4>
             <br>
         <ul class="proj-list">
             <li class="proj-card proj-card-featured">
@@ -152,6 +152,197 @@
                         <li>Funix</li>
                         <li>Docker</li>
                         <li>RAG</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="proj-card proj-card-featured">
+                <div class="proj-head">
+                    <h5 class="proj-title">Token-efficient RAG with query-aware summarization</h5>
+                    <div class="proj-links">
+                        <a class="proj-link proj-link-demo" href="documents/rag_token_optimization_slides.pdf" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Slides</a>
+                    </div>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Standard RAG sends whole retrieved chunks to the LLM, so most prompt tokens have nothing to do with the question. This project cuts that cost for high-volume HPC question-answering workloads (CS 6250).</li>
+                    <li>Added a two-stage compression step after retrieval and re-ranking: keyword-overlap filtering keeps the top-k sentences of each document, then a local T5 model writes a query-aware summary that replaces the full retrieved text in the GPT-3.5-Turbo prompt.</li>
+                    <li>On 918 questions from rag-mini-wikipedia, T5-Small summarization used 60% fewer tokens than the baseline while exact match fell only 2.9 points and BERTScore stayed above 0.93.</li>
+                </ul>
+
+                <ul class="proj-stats">
+                    <li><strong>60%</strong><span>fewer tokens with T5-Small (604K &rarr; 241K)</span></li>
+                    <li><strong>&minus;2.9</strong><span>points exact match (58.28% &rarr; 55.34%)</span></li>
+                    <li><strong>95%</strong><span>of baseline accuracy kept</span></li>
+                    <li><strong>&gt;0.93</strong><span>BERTScore for every variant</span></li>
+                </ul>
+
+                <span class="exp-label">Method</span>
+                <div class="proj-steps" role="tablist" aria-label="Token-efficient RAG method steps">
+                    <button type="button" class="proj-step is-active" role="tab" aria-selected="true" data-step="0"><span>1</span>Retrieve</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="1"><span>2</span>Filter</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="2"><span>3</span>Summarize</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="3"><span>4</span>Prompt</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="4"><span>5</span>Generate</button>
+                </div>
+                <div class="proj-panel" role="tabpanel" aria-live="polite">
+                    <div class="proj-detail is-active">
+                        <p>The same pipeline as the baseline: documents are cleaned, chunked and embedded, then FAISS dense search finds candidate chunks and a cross-encoder re-ranks them.</p>
+                        <ul class="proj-chips"><li>PDF ingestion (PyPDF2)</li><li>Text cleaning</li><li>512-token chunks</li><li>BAAI/bge-large-en-v1.5 embeddings</li><li>FAISS search</li><li>Cross-encoder re-ranking</li><li>Top 5 documents</li></ul>
+                    </div>
+                    <div class="proj-detail">
+                        <p>From each retrieved document, keep the <strong>top 5 sentences</strong> by word overlap with the query, scored as |s &cap; q| / |s &cup; q|. If no sentence overlaps, fall back to the first 5 sentences.</p>
+                    </div>
+                    <div class="proj-detail">
+                        <p>A local FLAN-T5 model condenses the filtered sentences into a 120&ndash;180-token <strong>query-aware summary</strong>, prompted with &ldquo;Summarize the following text in context of the question&rdquo;. Three sizes were compared:</p>
+                        <ul class="proj-chips"><li>flan-t5-small (60M)</li><li>flan-t5-base (220M)</li><li>flan-t5-large (770M)</li></ul>
+                    </div>
+                    <div class="proj-detail">
+                        <p>The final prompt is <strong>query + summaries</strong> instead of query + full retrieved text, which is where the token savings come from.</p>
+                    </div>
+                    <div class="proj-detail">
+                        <p>GPT-3.5-Turbo answers from the compressed prompt. Summarization runs locally, so it adds no API cost, and the design works with any generator model.</p>
+                    </div>
+                </div>
+
+                <div class="proj-figures">
+                    <figure class="proj-figure">
+                        <img src="img/rag_pipeline.png" alt="Baseline RAG pipeline">
+                        <figcaption>Baseline: full retrieved chunks go to the LLM</figcaption>
+                    </figure>
+                    <figure class="proj-figure">
+                        <img src="img/rag_token_method.png" alt="Proposed pipeline with sentence filtering and summarization before response generation">
+                        <figcaption>Proposed: filter and summarize before generation</figcaption>
+                    </figure>
+                </div>
+
+                <div class="proj-results" data-chart="rto">
+                    <div class="proj-results-head">
+                        <span class="exp-label">Results on 918 rag-mini-wikipedia questions</span>
+                        <div class="proj-toggle" data-group="metric" aria-label="Metric">
+                            <button type="button" class="is-active" data-value="em">Exact match</button>
+                            <button type="button" data-value="f1">F1</button>
+                            <button type="button" data-value="bert">BERTScore</button>
+                            <button type="button" data-value="tok">Tokens</button>
+                        </div>
+                    </div>
+                    <div class="proj-bars"></div>
+                    <p class="proj-axis-note"></p>
+                </div>
+                <p class="proj-finding">Bigger summarizers did not help: the 770M-parameter T5-Large scored lowest and saved no more tokens than the 60M-parameter T5-Small, likely because it over-compresses and drops key facts. Average prompt size fell from 658 to 262 tokens per question.</p>
+
+                <div class="proj-results" data-chart="qtype">
+                    <div class="proj-results-head">
+                        <span class="exp-label">Performance by question type</span>
+                        <div class="proj-toggle" data-group="model" aria-label="Model">
+                            <button type="button" class="is-active" data-value="0">Baseline</button>
+                            <button type="button" data-value="1">T5-Small</button>
+                            <button type="button" data-value="2">T5-Base</button>
+                            <button type="button" data-value="3">T5-Large</button>
+                        </div>
+                        <div class="proj-toggle" data-group="metric" aria-label="Metric">
+                            <button type="button" class="is-active" data-value="em">Exact match</button>
+                            <button type="button" data-value="f1">F1</button>
+                        </div>
+                    </div>
+                    <div class="proj-bars"></div>
+                    <p class="proj-axis-note"></p>
+                </div>
+                <p class="proj-finding">Yes/No questions, 46% of the dataset, stay above 83% for every model. Why questions stay at 4% or below, and What questions, a quarter of the dataset, sit near 27%: the clearest targets for future work.</p>
+
+                <div class="exp-block">
+                    <span class="exp-label">Tech</span>
+                    <ul class="exp-tags">
+                        <li>Python</li>
+                        <li>FAISS</li>
+                        <li>Cross-encoder re-ranking</li>
+                        <li>FLAN-T5</li>
+                        <li>LangChain</li>
+                        <li>PyTorch</li>
+                        <li>Hugging Face Transformers</li>
+                        <li>Nova HPC (2&times; A100)</li>
+                        <li>GPT-3.5-Turbo</li>
+                        <li>BERTScore</li>
+                        <li>ROUGE</li>
+                        <li>RAG</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="proj-card proj-card-featured">
+                <div class="proj-head">
+                    <h5 class="proj-title">Aggregated Token Attention Network (ATAN) for food review sentiment</h5>
+                    <div class="proj-links">
+                        <a class="proj-link proj-link-demo" href="documents/atan_slides.pdf" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Slides</a>
+                    </div>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Three-class sentiment classification (negative, neutral, positive) of Amazon Fine Food Reviews, combining review text with user-specific rating data.</li>
+                    <li>Fine-tuned several pre-trained BERT models and averaged their token-level attention scores into a single aggregated attention, which drives the final class prediction.</li>
+                    <li>The aggregated model reached 77% accuracy and 0.77 macro F1 on a balanced 12,000-review test set, ahead of every individual model.</li>                </ul>
+
+                <span class="exp-label">Method</span>
+                <div class="proj-steps" role="tablist" aria-label="ATAN method steps">
+                    <button type="button" class="proj-step is-active" role="tab" aria-selected="true" data-step="0"><span>1</span>Preprocess</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="1"><span>2</span>Balance</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="2"><span>3</span>Fine-tune</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="3"><span>4</span>Aggregate</button>
+                    <button type="button" class="proj-step" role="tab" aria-selected="false" data-step="4"><span>5</span>Predict</button>
+                </div>
+                <div class="proj-panel" role="tabpanel" aria-live="polite">
+                    <div class="proj-detail is-active">
+                        <p>Each review is cleaned before tokenization:</p>
+                        <ul class="proj-chips"><li>Punctuation removal</li><li>URL and unwanted-word removal</li><li>Lowercasing</li><li>Stop-word removal</li><li>Lemmatization</li></ul>
+                    </div>
+                    <div class="proj-detail">
+                        <p>The raw data is heavily skewed toward positive reviews, so each class is down-sampled to <strong>20,000</strong> reviews, giving <strong>60,000</strong> in total, then split <strong>80:20</strong> into 48,000 training and 12,000 test reviews.</p>
+                    </div>
+                    <div class="proj-detail">
+                        <p>Pre-trained BERT models are fine-tuned on the review text and user ratings:</p>
+                        <ul class="proj-chips"><li>bert-base-uncased</li><li>lxyuan/distilbert-base-multilingual-cased-sentiments-student</li><li>nlptown/bert-base-multilingual-uncased-sentiment</li></ul>
+                    </div>
+                    <div class="proj-detail">
+                        <p>Token-level attention scores from every model are averaged into one aggregated attention. Each model ships its own tokenizer, so the attention vectors differ in length and are padded to a common size before the element-wise average.</p>
+                    </div>
+                    <div class="proj-detail">
+                        <p>The aggregated attention feeds the classifier, which outputs one of three labels: <strong>Negative (0)</strong>, <strong>Neutral (1)</strong> or <strong>Positive (2)</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="proj-figures proj-figures-single">
+                    <figure class="proj-figure">
+                        <img src="img/atan_architecture.png" alt="ATAN architecture: attention from each model is aggregated into a final attention">
+                        <figcaption>ATAN architecture: attention from each model flows into one aggregation step (click to enlarge)</figcaption>
+                    </figure>
+                </div>
+
+                <div class="proj-results" data-chart="atan">
+                    <div class="proj-results-head">
+                        <span class="exp-label">Results on the 12,000-review test set</span>
+                        <div class="proj-toggle" data-group="metric" aria-label="Metric">
+                            <button type="button" class="is-active" data-value="acc">Accuracy</button>
+                            <button type="button" data-value="p">Precision</button>
+                            <button type="button" data-value="r">Recall</button>
+                            <button type="button" data-value="f1">F1</button>
+                        </div>
+                        <div class="proj-toggle" data-group="cls" aria-label="Class">
+                            <button type="button" class="is-active" data-value="macro">Macro avg</button>
+                            <button type="button" data-value="0">Negative</button>
+                            <button type="button" data-value="1">Neutral</button>
+                            <button type="button" data-value="2">Positive</button>
+                        </div>
+                    </div>
+                    <div class="proj-bars"></div>
+                    <p class="proj-axis-note"></p>
+                </div>
+
+                <div class="exp-block">
+                    <span class="exp-label">Tech</span>
+                    <ul class="exp-tags">
+                        <li>Python</li>
+                        <li>PyTorch</li>
+                        <li>Hugging Face Transformers</li>
+                        <li>BERT</li>
+                        <li>DistilBERT</li>
+                        <li>Attention</li>
+                        <li>Sentiment analysis</li>
                     </ul>
                 </div>
             </li>
@@ -340,7 +531,7 @@
                         <li><a href="research.html">Research Experience</a></li>
                         <li><a href="research_project.html">Projects</a></li>
                         <li><a href="affiliation.html">Certifications</a></li>
-                        <li><a href="extracurricular.html">Extracurricular</a></li>
+                        <li><a href="extracurricular.html">Outreach</a></li>
                         <li><a href="skills.html">Skills</a></li>
                 </ul>
             </div>
@@ -386,6 +577,121 @@
 
             $('html, body').animate({scrollTop: 0}, 1500);
         })
+
+        // Method stepper: each project card switches its own detail panel
+        $('.proj-step').click(function() {
+            var $card = $(this).closest('.proj-card');
+            var i = $(this).data('step');
+            $card.find('.proj-step').removeClass('is-active').attr('aria-selected', 'false');
+            $(this).addClass('is-active').attr('aria-selected', 'true');
+            $card.find('.proj-detail').removeClass('is-active').eq(i).addClass('is-active');
+        });
+
+        // Results charts, keyed by the data-chart attribute on .proj-results
+        var projCharts = {
+            // Macro averages and per-class scores from the ATAN classification reports
+            atan: {
+                state: {metric: 'acc', cls: 'macro'},
+                models: [
+                    {name: 'bert-base-uncased', acc: .75, macro: {p: .76, r: .75, f1: .76},
+                     p: [.79, .63, .86], r: [.70, .73, .83], f1: [.74, .68, .85]},
+                    {name: 'distilbert-multilingual-sentiments-student', acc: .71, macro: {p: .72, r: .71, f1: .72},
+                     p: [.69, .62, .85], r: [.75, .64, .75], f1: [.72, .63, .80]},
+                    {name: 'bert-base-multilingual-uncased-sentiment', acc: .74, macro: {p: .75, r: .74, f1: .75},
+                     p: [.75, .64, .85], r: [.73, .68, .82], f1: [.74, .66, .84]},
+                    {name: 'ATAN (proposed)', acc: .77, macro: {p: .78, r: .77, f1: .77},
+                     p: [.80, .65, .88], r: [.71, .75, .84], f1: [.75, .69, .86], ours: true}
+                ],
+                value: function(m, s) {
+                    if (s.metric === 'acc') return m.acc;
+                    return s.cls === 'macro' ? m.macro[s.metric] : m[s.metric][+s.cls];
+                },
+                range: function() { return [.6, .9]; },
+                format: function(v) { return v.toFixed(2); },
+                disableCls: true
+            },
+            // 918 rag-mini-wikipedia questions; T5-Small is the recommended setting
+            rto: {
+                state: {metric: 'em'},
+                models: [
+                    {name: 'Baseline RAG', em: 58.28, f1: .704, bert: .9474, tok: 604223},
+                    {name: 'T5-Small summary (recommended)', em: 55.34, f1: .640, bert: .9389, tok: 240580, ours: true},
+                    {name: 'T5-Base summary', em: 53.70, f1: .633, bert: .9397, tok: 231525},
+                    {name: 'T5-Large summary', em: 52.83, f1: .614, bert: .9360, tok: 241491}
+                ],
+                value: function(m, s) { return m[s.metric]; },
+                range: function(s) {
+                    return {em: [40, 60], f1: [.5, .72], bert: [.92, .95], tok: [0, 650000]}[s.metric];
+                },
+                note: function(s) {
+                    return s.metric === 'tok' ? 'Lower is better: fewer tokens sent to the LLM.'
+                         : 'Bars start at ' + (s.metric === 'em' ? '40%' : this.range(s)[0]) + ' so small differences stay visible.';
+                },
+                format: function(v, s) {
+                    if (s.metric === 'em') return v.toFixed(2) + '%';
+                    if (s.metric === 'tok') return Math.round(v / 1000) + 'K';
+                    return s.metric === 'bert' ? v.toFixed(4) : v.toFixed(3);
+                }
+            },
+            // Table 4 of the paper: [exact match %, F1] for Baseline, T5-Small, T5-Base, T5-Large
+            qtype: {
+                state: {model: '0', metric: 'em'},
+                models: [
+                    {name: 'Yes/No (420)', v: [[89.8, .899], [85.2, .853], [83.6, .836], [85.7, .857]]},
+                    {name: 'When (41)',    v: [[53.7, .686], [53.7, .615], [41.5, .539], [31.7, .410]]},
+                    {name: 'Which (11)',   v: [[45.5, .624], [36.4, .573], [45.5, .604], [36.4, .513]]},
+                    {name: 'Other (51)',   v: [[41.2, .659], [47.1, .651], [41.2, .624], [39.2, .537]]},
+                    {name: 'Who (54)',     v: [[40.7, .654], [29.6, .510], [31.5, .548], [29.6, .516]]},
+                    {name: 'Where (32)',   v: [[34.4, .604], [28.1, .549], [18.8, .516], [25.0, .470]]},
+                    {name: 'What (221)',   v: [[28.1, .489], [26.7, .409], [29.0, .434], [24.0, .391]]},
+                    {name: 'How (63)',     v: [[22.2, .446], [25.4, .386], [17.5, .354], [15.9, .303]]},
+                    {name: 'Why (25)',     v: [[4.0, .373], [0.0, .196], [4.0, .214], [4.0, .212]]}
+                ],
+                value: function(m, s) { return m.v[+s.model][s.metric === 'em' ? 0 : 1]; },
+                range: function(s) { return s.metric === 'em' ? [0, 100] : [0, 1]; },
+                note: function() { return 'Number of questions of each type in brackets.'; },
+                format: function(v, s) { return s.metric === 'em' ? v.toFixed(1) + '%' : v.toFixed(3); }
+            }
+        };
+
+        function drawChart($box) {
+            var c = projCharts[$box.data('chart')];
+            var s = c.state, r = c.range(s);
+            if (c.disableCls) {
+                $box.find('.proj-toggle[data-group="cls"] button').prop('disabled', s.metric === 'acc');
+            }
+            var html = c.models.map(function(m) {
+                var v = c.value(m, s);
+                var w = Math.max(0, Math.min(100, (v - r[0]) / (r[1] - r[0]) * 100));
+                return '<div class="proj-bar' + (m.ours ? ' is-ours' : '') + '">' +
+                       '<span class="proj-bar-name">' + m.name + '</span>' +
+                       '<span class="proj-bar-track"><span class="proj-bar-fill" style="width:' + w + '%"></span></span>' +
+                       '<span class="proj-bar-val">' + c.format(v, s) + '</span></div>';
+            }).join('');
+            $box.find('.proj-bars').html(html);
+            $box.find('.proj-axis-note').text(c.note ? c.note(s)
+                : 'Bars start at ' + c.format(r[0], s) + ' so small differences stay visible.');
+        }
+
+        $('.proj-toggle button').click(function() {
+            var $b = $(this), $box = $b.closest('.proj-results');
+            $b.siblings().removeClass('is-active');
+            $b.addClass('is-active');
+            projCharts[$box.data('chart')].state[$b.parent().data('group')] = String($b.data('value'));
+            drawChart($box);
+        });
+        $('.proj-results').each(function() { drawChart($(this)); });
+
+        // Click a project figure to view it full size
+        $('.proj-figure img').click(function() {
+            $('<div class="proj-lightbox" role="dialog" aria-label="Enlarged figure">')
+                .append($('<img>').attr({src: this.src, alt: this.alt}))
+                .appendTo('body')
+                .click(function() { $(this).remove(); });
+        });
+        $(document).keydown(function(e) {
+            if (e.key === 'Escape') $('.proj-lightbox').remove();
+        });
     });
 
 </script>
