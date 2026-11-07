@@ -187,7 +187,9 @@ body {
 }
 
 .hero-card {
-    background: var(--surface);
+    background: linear-gradient(120deg, #fffdf9 0%, #f6ecee 45%, #fffdf9 100%);
+    background-size: 220% 220%;
+    background-position: 0% 50%;
     border: 1px solid var(--line);
     border-radius: 14px;
     padding: 2.6rem 2.9rem;
@@ -196,6 +198,17 @@ body {
     gap: 2.75rem;
     box-shadow: 0 1px 2px rgba(16, 32, 48, .04),
                 0 14px 34px -16px rgba(16, 32, 48, .18);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hero-card {
+        animation: profile-gradient-drift 18s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes profile-gradient-drift {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
 }
 
 /* photo ------------------------------------------------------------------- */
@@ -447,7 +460,7 @@ body {
     color: #a3aeb8;
     font-size: .9rem;
     margin-top: 3rem;
-    padding: 3.1rem 0 0;
+    padding: 1.8rem 0 0;
 }
 
 .site-footer-grid {
@@ -572,7 +585,7 @@ body {
 /* bottom bar -------------------------------------------------------------- */
 .site-footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, .09);
-    padding: 1.15rem 0 1.3rem;
+    padding: .8rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2031,4 +2044,285 @@ body {
 
 .proj-figures {
     align-items: start;
+}
+
+/* ------------------------------------------------- availability badge (hero) */
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    margin: 0 0 1rem;
+    padding: .38rem .9rem .38rem .7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink) !important;
+    text-decoration: none !important;
+    transition: border-color .18s ease, box-shadow .18s ease;
+}
+.hero-status:hover,
+.hero-status:focus {
+    border-color: #b8dfc4;
+    box-shadow: 0 2px 10px -4px rgba(22, 32, 42, .25);
+}
+.hero-status-dot {
+    position: relative;
+    width: .55rem;
+    height: .55rem;
+    border-radius: 50%;
+    background: #2f9e57;
+    box-shadow: 0 0 0 3px rgba(47, 158, 87, .18);
+    flex: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero-status-dot::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: #2f9e57;
+        animation: hero-status-pulse 2.2s ease-out infinite;
+    }
+}
+@keyframes hero-status-pulse {
+    0%   { transform: scale(1);   opacity: .55; }
+    100% { transform: scale(2.6); opacity: 0; }
+}
+
+
+.footer-tagline strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ------------------------------------------- footer: contact ("Let's talk") */
+.talk-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2.75rem;
+    align-items: center;
+    padding: .25rem 0 1.6rem;
+}
+.site-footer .talk-title {
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 1rem;
+}
+.talk-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #b4bec8;
+    margin: 0;
+}
+.talk-text strong {
+    color: #fff;
+    font-weight: 600;
+}
+.talk-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .35rem;
+}
+.talk-links a,
+.talk-links span {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    padding: .48rem .85rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .06);
+    color: #e8ecef !important;
+    font-size: .9rem;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+    transition: background .18s ease, transform .18s ease;
+}
+.talk-links a:hover,
+.talk-links a:focus {
+    background: rgba(255, 255, 255, .11);
+    transform: translateX(3px);
+}
+.talk-links .fa {
+    width: 1.1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #a3aeb8;
+    flex: none;
+}
+.talk-card .footer-social a:hover {
+    background: var(--accent);
+    border-color: var(--accent) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+@media (max-width: 767px) {
+    .talk-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+        padding-bottom: 1.4rem;
+    }
+    .talk-title {
+        font-size: 2rem;
+    }
+}
+.site-footer .talk-title {
+    text-transform: none;
+}
+@media (max-width: 767px) {
+    .site-footer .talk-title {
+        font-size: 2rem;
+    }
+}
+.site-footer {
+    background: #321b24;
+}
+
+/* ---------------------------------------------------------- skills toolbox */
+@media (prefers-reduced-motion: no-preference) {
+    .talk-links.contact-reveal > li {
+        animation: contact-bar-appear 600ms cubic-bezier(.22, 1, .36, 1) both;
+        animation-delay: var(--contact-delay, 0ms);
+    }
+    .talk-links.contact-reveal:focus-within > li {
+        animation: none;
+    }
+}
+
+@keyframes contact-bar-appear {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tool-group {
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.4rem 0 .8rem;
+}
+.tool-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .7rem;
+}
+.tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    min-height: 118px;
+    padding: 1.1rem .6rem .9rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-align: center;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.tool-card:hover {
+    border-color: #d5dbe0;
+    box-shadow: 0 8px 18px -12px rgba(16, 32, 48, .35);
+    transform: translateY(-2px);
+}
+.tool-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    height: 42px;
+}
+.tool-logos img {
+    height: 38px;
+    width: auto;
+    max-width: 44px;
+}
+.tool-logos img + img {
+    height: 32px;
+}
+.tool-emoji {
+    font-size: 2.1rem;
+    line-height: 1;
+}
+.tool-word {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -.01em;
+}
+.tool-flair {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #111;
+}
+.tool-flair b {
+    color: #f28c28;
+}
+.tool-name {
+    font-size: .8rem;
+    line-height: 1.35;
+    color: var(--ink);
+}
+@media (max-width: 991px) {
+    .tool-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 575px) {
+    .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.tool-icon {
+    font-size: 1.85rem;
+    color: var(--accent);
+}
+.tool-bn {
+    font-size: 1.9rem;
+    color: var(--accent);
+}
+.tool-logos img + img + img {
+    height: 28px;
+}
+.tool-logos .tool-icon + .tool-icon,
+.tool-logos img + .tool-icon {
+    font-size: 1.5rem;
+}
+
+/* Focused homepage introduction */
+#index .intro-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 6px 24px -18px rgba(22, 32, 42, .2);
+    text-align: left;
+}
+#index .intro-card h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 1.25rem;
+    line-height: 1.3;
+}
+#index .intro-card .intro-text { max-width: 72ch; }
+#index .intro-card .intro-text p { margin-bottom: 1.3rem; }
+#index .intro-card .intro-text p:last-child { margin-bottom: 0; }
+#index .intro-card .intro-text p:first-child { font-size: 1.1rem; color: var(--ink); }
+@media (max-width: 575px) {
+    #index .intro-card { padding: 1.4rem 1.2rem; }
+    #index .intro-card h2 { font-size: 1.4rem; }
+    #index .intro-card .intro-text p:first-child { font-size: 1.03rem; }
 }

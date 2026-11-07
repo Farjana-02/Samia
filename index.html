@@ -59,6 +59,7 @@
             <img src="img/mypic.png" alt="Farjana Sultana Samia">
         </div>
         <div class="hero-body">
+            <a class="hero-status" href="index.html#contact"><span class="hero-status-dot" aria-hidden="true"></span>Open to Summer 2027 ML / NLP internships</a>
             <p class="hero-eyebrow">Iowa State University &middot; Ames, Iowa, USA</p>
             <h1 class="hero-name">Farjana Sultana Samia</h1>
             <p class="hero-title">Ph.D. Student in Computer Science</p>
@@ -85,7 +86,7 @@
 
             <div class="hero-actions">
                 <a class="hero-cv" href="./documents/samia_resume.pdf" target="_blank" rel="noopener">
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Curriculum Vitae
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Download Resume
                 </a>
                 <a class="hero-icon" href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -118,32 +119,31 @@
 <div class="container body_des">
     <div class="row">
         <div class="col-md-12 text-justify">
-            <h4><img alt='' src='img/lister.png' width='15'  /> Introduction </h4>
-            <br>
+            <section class="intro-card" aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Introduction</h2>
             <div class="intro-text">
                 <p>
                     I am a Ph.D. student in the Department of Computer Science at
                     <a href="https://www.cs.iastate.edu/people/farjana-sultana-samia" target="_blank" rel="noopener">Iowa State University</a>,
                     where I work as a Graduate Research Assistant in the Data and Knowledge Mining Lab under the
-                    supervision of <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Dr. Qi Li</a>, Associate
-                    Professor of Computer Science.
+                    supervision of <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Qi Li</a>.
                 </p>
                 <p>
                     My research lies at the intersection of natural language processing and knowledge
                     representation. I work on entity linking, information extraction and knowledge graphs, and on
-                    using large language models to retrieve and reason over scientific and biomedical text &mdash;
-                    with a particular interest in methods that generalize to new domains with little or no
-                    task-specific supervision. I currently contribute to an NSF-funded research project in this
+                    using large language models and retrieval-augmented generation (RAG) to retrieve and reason
+                    over scientific and biomedical text. I am especially interested in methods that generalize to
+                    new domains with little or no task-specific supervision. My work in this direction has been published at
+                    EMNLP 2026. I currently contribute to an NSF-funded research project in this
                     area.
                 </p>
                 <p>
-                    Before beginning my doctorate, I was a Software Engineer in natural language processing at
-                    Technometrics Limited in Dhaka, Bangladesh, where I built Bengali multi-label topic
-                    classification and aspect-based sentiment analysis systems. My work in this line of research
-                    has been published at the Conference on Empirical Methods in Natural Language Processing
-                    (EMNLP).
+                    Before my Ph.D., I spent a year as a Software Engineer (NLP) at Technometrics Limited, building
+                    production NLP systems for Bengali text classification, sentiment analysis, and large-scale
+                    web data collection.
                 </p>
             </div>
+            </section>
         </div>
     </div>
     <br/>
@@ -312,23 +312,22 @@
 
 
 
+
 <!--top scroller here-->
-<a href="#" class="go-top rounded-pill"><i class="fa fa-arrow-up"></i> </a>
+
 <!--end top scroller here-->
 
 
 <!--footer parts start -->
-<footer class="site-footer">
+<footer class="site-footer" id="contact">
     <div class="container">
-        <div class="site-footer-grid">
-
-            <div class="footer-col-identity">
-                <p class="footer-name">Farjana Sultana Samia</p>
-                <p class="footer-tagline">
-                    Ph.D. student in Computer Science at Iowa State University, working on
-                    natural language processing, large language models and entity linking.
-                </p>
-                <div class="footer-social">
+        <div class="talk-card">
+        <div class="talk-intro">
+            <h2 class="talk-title">Let&rsquo;s talk.</h2>
+            <p class="talk-text">I&rsquo;m looking for <strong>Summer 2027</strong> research or applied-science
+                internships in ML, NLP and LLMs, available <strong>May 20 &ndash; Aug 30, 2027</strong>.
+                I&rsquo;m also happy to discuss research collaborations.</p>
+            <div class="footer-social">
                     <a href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </a>
@@ -348,33 +347,15 @@
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>
-
-            <div>
-                <h2>Navigate</h2>
-                <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="Experience.html">Experience</a></li>
-                        <li><a href="research.html">Research Experience</a></li>
-                        <li><a href="research_project.html">Projects</a></li>
-                        <li><a href="affiliation.html">Certifications</a></li>
-                        <li><a href="extracurricular.html">Outreach</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h2>Contact</h2>
-                <a href="mailto:fssamia@iastate.edu">fssamia@iastate.edu</a><br>
-                <a href="mailto:samia.cse.miu@gmail.com">samia.cse.miu@gmail.com</a>
-                <address>
-                    Department of Computer Science<br>
-                    Iowa State University<br>
-                    Ames, Iowa, USA
-                </address>
-            </div>
-
+        </div>
+        <ul class="talk-links">
+            <li><a href="mailto:fssamia@iastate.edu"><i class="fa fa-envelope-o" aria-hidden="true"></i>fssamia@iastate.edu</a></li>
+            <li><a href="mailto:samia.cse.miu@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>samia.cse.miu@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/farjanasultanasamia/" target="_blank" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i>linkedin.com/in/farjanasultanasamia</a></li>
+            <li><a href="https://github.com/Samia-00" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>github.com/Samia-00</a></li>
+            <li><a href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a></li>
+            <li><span><i class="fa fa-map-marker" aria-hidden="true"></i>Ames, Iowa, USA</span></li>
+        </ul>
         </div>
 
         <div class="site-footer-bottom">
@@ -409,5 +390,6 @@
 
 </script>
 
+<script src="js/footer-reveal.js" defer></script>
 </body>
 </html>

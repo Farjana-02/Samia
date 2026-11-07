@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="keywords" content="samia,farjana, farjana sultana samia, cse, manarat,miu,profile,personal ,engineer,farjana sultana,computer science, computer">
+    <title>Sci-ZSEL · EMNLP 2026</title>
+    <meta name="description" content="Sci-ZSEL: LLM-assisted, cost-efficient, zero-shot scientific entity linking (EMNLP 2026). Pseudo-label construction by Farjana Sultana Samia.">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="icon" href="img/fs logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+
+<body id="sci-zsel">
+<!--navigation start here-->
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg container">
+        <a class="site-brand" href="index.html">
+            <span class="site-brand-name">Farjana Sultana Samia</span>
+            <span class="site-brand-sub">Iowa State University</span>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#nav1"
+                aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav1">
+            <ul class="navbar-nav site-menu">
+                            <li><a class="site-menu-link" href="index.html">Home</a></li>
+                            <li><a class="site-menu-link" href="education.html">Education</a></li>
+                            <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
+                            <li class="is-active"><a class="site-menu-link" href="research.html" aria-current="page">Research Experience</a></li>
+                            <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
+                            <li><a class="site-menu-link" href="extracurricular.html">Outreach</a></li>
+                            <li><a class="site-menu-link" href="skills.html">Skills</a></li>
+                        </ul>
+        </div>
+    </nav>
+</header>
+<!--end navigation-->
+
+<style>
+    .paper-head { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 2rem 2.2rem; margin: 2rem 0 1.5rem; }
+    .paper-back { font-size: .8rem; color: var(--muted) !important; text-decoration: none; }
+    .paper-back:hover { color: var(--accent) !important; text-decoration: none; }
+    .paper-venue { display: block; margin: 1rem 0 .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+    .paper-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.85rem; line-height: 1.25; font-weight: 700; color: var(--ink); margin: 0 0 .9rem; }
+    .paper-authors { font-size: .98rem; color: var(--ink); margin: 0 0 .25rem; }
+    .paper-authors .pub-me { font-weight: 600; border-bottom: 2px solid rgba(160, 28, 46, .35); }
+    .paper-affil { font-size: .85rem; color: var(--muted); margin: 0 0 .2rem; }
+    .paper-note { font-size: .75rem; color: var(--muted); margin: 0 0 1.1rem; }
+    .paper-section { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.8rem 2.2rem; margin-bottom: 1.5rem; }
+    .paper-section h2 { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.32rem; font-weight: 600; color: var(--ink); margin: 0 0 .9rem; }
+    .paper-section h3 { font-size: .98rem; font-weight: 600; color: var(--ink); margin: 1.4rem 0 .5rem; }
+    .paper-section p, .paper-section li { font-size: .93rem; line-height: 1.75; color: var(--body-text); }
+    .paper-section a { color: var(--accent); }
+    .tldr-example { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; background: #fafbfc; border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1.1rem; margin-top: 1rem; font-size: .88rem; }
+    .tldr-example small { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+    .tldr-arrow { color: var(--accent); font-size: 1.2rem; }
+    .paper-steps { list-style: none; padding: 0; margin: 1.2rem 0 0; counter-reset: s; }
+    .paper-steps li { counter-increment: s; position: relative; padding-left: 2.4rem; margin-bottom: .8rem; }
+    .paper-steps li::before { content: counter(s); position: absolute; left: 0; top: .15rem; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--accent); color: #fff; font-size: .8rem; font-weight: 600; display: grid; place-items: center; }
+    .paper-steps li.is-mine::before { box-shadow: 0 0 0 3px rgba(160, 28, 46, .2); }
+    .paper-steps b { color: var(--ink); }
+    .mine-tag { display: inline-block; margin-left: .4rem; font-size: .66rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: .08rem .45rem; border-radius: 999px; background: #faf2f3; color: var(--accent); border: 1px solid #eed4d9; vertical-align: middle; }
+    .contrib-box { border-left: 3px solid var(--accent); background: #fcf8f8; padding: .9rem 1.1rem; border-radius: 0 8px 8px 0; margin: 0 0 1rem; }
+    .contrib-box p { margin: 0; }
+    .formula { font-family: 'SFMono-Regular', Menlo, Consolas, monospace; font-size: .82rem; background: #f5f6f8; border: 1px solid var(--line); border-radius: 6px; padding: .15rem .4rem; color: var(--ink); white-space: nowrap; }
+    .pair-example { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; margin: 1rem 0; }
+    .pair-example > div { background: #fafbfc; border: 1px solid var(--line); border-radius: 10px; padding: .8rem .9rem; font-size: .84rem; }
+    .pair-example small { display: block; font-size: .68rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: .35rem; }
+    .pair-example code { color: var(--ink); background: none; font-size: .82rem; }
+    .paper-table-wrap { overflow-x: auto; margin: .8rem 0; }
+    .paper-table { width: 100%; border-collapse: collapse; font-size: .84rem; font-variant-numeric: tabular-nums; }
+    .paper-table th, .paper-table td { padding: .5rem .7rem; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+    .paper-table th:first-child, .paper-table td:first-child { text-align: left; }
+    .paper-table th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+    .paper-table td { color: var(--ink); }
+    .paper-table .is-best { font-weight: 600; color: var(--accent); }
+    .paper-caption { font-size: .78rem !important; color: var(--muted) !important; margin: .2rem 0 0; }
+    .viz-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin: .4rem 0 1rem; }
+    .viz-legend { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .78rem; color: var(--muted); margin-bottom: .8rem; }
+    .viz-legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
+    .viz-row { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: .75rem; align-items: center; margin-bottom: .7rem; font-size: .8rem; }
+    .viz-row .viz-name { color: var(--ink); font-weight: 500; }
+    .viz-bars { display: grid; gap: .25rem; }
+    .viz-bar { display: grid; grid-template-columns: minmax(0, 1fr) 3rem; gap: .5rem; align-items: center; }
+    .viz-bar .proj-bar-track { height: .62rem; }
+    .viz-bar.is-ours .proj-bar-fill { background: var(--accent); }
+    .viz-bar .proj-bar-val { font-size: .76rem; }
+    .viz-bar.is-ours .proj-bar-val { font-weight: 600; }
+    .paper-section details { margin-top: 1rem; }
+    .paper-section summary { font-size: .8rem; font-weight: 600; color: var(--accent); cursor: pointer; }
+    .bib-wrap { position: relative; }
+    .bib-wrap pre { background: #f5f6f8; border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; font-size: .78rem; line-height: 1.6; color: var(--ink); white-space: pre-wrap; word-break: break-word; margin: 0; }
+    .bib-copy { position: absolute; top: .6rem; right: .6rem; }
+    .paper-foot { font-size: .8rem; color: var(--muted); margin: 0 0 2rem; }
+    @media (max-width: 575px) {
+        .paper-head, .paper-section { padding: 1.3rem 1.1rem; }
+        .paper-title { font-size: 1.45rem; }
+        .pair-example { grid-template-columns: minmax(0, 1fr); }
+        .viz-row { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+    }
+</style>
+
+<main class="container">
+
+    <div class="paper-head">
+        <a class="paper-back" href="research.html">&larr; Back to Research Experience</a>
+        <span class="paper-venue">EMNLP 2026 &middot; Budapest</span>
+        <h1 class="paper-title">Bridging Lexical Divergence: LLM-Assisted, Cost-Efficient, Zero-shot Scientific Entity Linking</h1>
+        <p class="paper-authors">
+            Md Rasel Khondokar, Qiao Qiao, <span class="pub-me">Farjana Sultana Samia</span>,
+            Nhat Le, Yuepei Li, <a href="https://www.cs.iastate.edu/people/qi-li" target="_blank" rel="noopener">Qi Li</a>
+        </p>
+        <p class="paper-affil" style="margin-bottom: 1.1rem;">Department of Computer Science, Iowa State University</p>
+        <div class="proj-links">
+            <a class="proj-link proj-link-demo" href="https://arxiv.org/pdf/2609.00228" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Paper</a>
+            <a class="proj-link" href="https://arxiv.org/abs/2609.00228" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> arXiv</a>
+            <a class="proj-link" href="#cite"><i class="fa fa-quote-right" aria-hidden="true"></i> BibTeX</a>
+        </div>
+    </div>
+
+<section class="paper-section" id="overview">
+        <h2>TL;DR</h2>
+        <p>Scientific entity linking breaks when a mention and its entity share no words. Sci-ZSEL builds training
+            pairs without human labels: it asks an LLM for aliases of a small set of selected entities, drops aliases
+            that drift toward neighboring concepts in the ontology, and uses the rest to fine-tune the linker. It
+            improves every backbone on five benchmarks, with the largest gains on mentions that share no words with
+            their entity.</p>
+        <div class="tldr-example">
+            <div><small>Mention in a PubMed abstract</small>&hellip;and <b>lambing potential</b> of Uruguayan Merino sheep</div>
+            <span class="tldr-arrow" aria-hidden="true">&rarr;</span>
+            <div><small>Correct ontology entity</small><b>Female Fecundity Trait</b> (child of Fertility Trait)</div>
+        </div>
+    </section>
+
+    <section class="paper-section" id="method">
+        <h2>How Sci-ZSEL works</h2>
+        <p>Instead of calling an LLM once per corpus mention, Sci-ZSEL generates aliases on the <b>entity side</b> for
+            a small set of selected entities. The aliases are then matched against real mentions to form training pairs,
+            and they can be reused for any new corpus that draws on the same ontology.</p>
+        <div class="proj-figures" style="grid-template-columns: minmax(0, 1fr);">
+            <figure class="proj-figure">
+                <img src="img/sci-zsel-overview.jpg" alt="Four-stage Sci-ZSEL pipeline: entity selection, pseudo-pair construction, ontology-aware retriever fine-tuning, reranker fine-tuning">
+                <figcaption>Figure 1 from the paper: the Sci-ZSEL framework with a worked example (click to enlarge)</figcaption>
+            </figure>
+        </div>
+        <ol class="paper-steps">
+            <li><b>Entity selection.</b> Pick the ontology entities whose names appear as mentions in the unlabeled
+                corpus, plus each mention's top-1 entity from a pretrained BLINK bi-encoder.</li>
+            <li class="is-mine"><b>Pseudo-pair construction.</b><span class="mine-tag">My part</span> Generate aliases
+                from each entity's definition with an LLM, filter out aliases that drift to ontology neighbors, and match
+                the remaining aliases to real mentions to build labeled mention&ndash;entity pairs.</li>
+            <li><b>Ontology-aware retriever fine-tuning.</b> Fine-tune the bi-encoder with hierarchy-aware positives
+                (parents and children) and in-batch negatives.</li>
+            <li><b>Reranker fine-tuning.</b> Fine-tune a cross-encoder (BLINK or ReS) on the same pseudo-pairs to rank
+                the retrieved candidates.</li>
+        </ol>
+    </section>
+
+    <section class="paper-section" id="contribution">
+        <h2>My contribution: pseudo-labels</h2>
+        <div class="contrib-box">
+            <p>I built the pseudo-labeled data construction and filtering pipeline (Section 5.2 of the paper). It turns
+                an unlabeled corpus and an ontology into mention&ndash;entity training pairs, with no human annotation.</p>
+        </div>
+
+        <h3>Why pseudo-labels are needed</h3>
+        <p>Fine-tuning fixes most of what goes wrong when general-domain linkers are applied to scientific text, but it
+            needs labeled mention&ndash;entity pairs. Scientific domains such as animal science have almost none, and
+            expert annotation is expensive. Pseudo-labels supply that training data automatically.</p>
+
+        <h3>How the pairs are built</h3>
+        <p>Three sources of pairs are combined:</p>
+        <ul class="exp-bullets">
+            <li><b>Surface-name matching (P<sub>1</sub>).</b> A mention that exactly matches an entity's name is paired
+                with that entity. Mention ambiguity is low in scientific text, so these pairs are usually correct.</li>
+            <li><b>LLM-generated aliases (P<sub>2</sub>).</b> Llama 3.2 3B Instruct reads an entity's definition and lists
+                alternative names. Each alias that survives the filter below is searched for in the corpus; an exact
+                match (after case and whitespace normalization) becomes a pair with the original entity.</li>
+            <li><b>Ontology synonyms (P<sub>Syn</sub>).</b> Curated synonyms in the ontology are matched against mentions
+                the same way.</li>
+        </ul>
+
+        <div class="pair-example">
+            <div><small>Entity &amp; definition</small><b>Hearing Loss</b><br>&ldquo;A general term for&hellip;&rdquo;</div>
+            <div><small>LLM aliases</small><code>Deafness, Hearing Impairment, Auditory Loss</code></div>
+            <div><small>Pseudo-pairs found in the corpus</small>
+                <code>deafness &rarr; Hearing Loss</code><br>
+                <code>hearing impairment &rarr; Hearing Loss</code><br>
+                <code>hearing loss &rarr; Hearing Loss</code></div>
+        </div>
+
+        <h3>Filtering drifted aliases</h3>
+        <p>LLM aliases often drift: an alias may describe a parent, child or sibling of the entity rather than the entity
+            itself. Each alias is compared with the entity name and with its closest ontology neighbor using cosine
+            similarity of BioLORD embeddings:</p>
+        <p><span class="formula">s_anchor = sim(name(e), alias)</span> &nbsp;
+            <span class="formula">s_drift = max sim(name(neighbor), alias)</span></p>
+        <p>An alias is discarded if <span class="formula">s_anchor &lt; s_drift</span> (it is closer to a neighbor than
+            to its own entity) or <span class="formula">s_anchor &lt; 0.9</span> (it has moved too far from the entity
+            name).</p>
+
+        <h3>What the filter changes</h3>
+        <p>On NCBI Disease and BC5CDR, which have gold labels for their training data, filtering raises pseudo-pair
+            accuracy from about 73% to over 90%:</p>
+        <div class="paper-table-wrap">
+            <table class="paper-table">
+                <thead><tr><th>Dataset</th><th>Setting</th><th>Pseudo-pair accuracy</th><th>Pairs</th></tr></thead>
+                <tbody>
+                    <tr><td>NCBI</td><td>Without filter</td><td>72.91</td><td>1,757</td></tr>
+                    <tr><td>NCBI</td><td>With filter</td><td class="is-best">90.32</td><td>1,301</td></tr>
+                    <tr><td>BC5CDR</td><td>Without filter</td><td>72.55</td><td>7,447</td></tr>
+                    <tr><td>BC5CDR</td><td>With filter</td><td class="is-best">91.40</td><td>5,766</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="paper-caption">Table 3 in the paper.</p>
+        <p>The ablation shows the filter is necessary: training on unfiltered aliases pushes reranker accuracy below the
+            non-fine-tuned baseline in several settings, with the largest overall Recall@1 drop of 7.50 points on
+            QTL-CMO with ReS. Over 80% of the filtered aliases on the animal science ontologies (bi-encoder top-1
+            setting) are new names that the ontologies themselves do not list.</p>
+    </section>
+
+    <section class="paper-section" id="benchmark">
+        <h2>A harder benchmark: animal science</h2>
+        <p>The paper releases three expert-curated, test-only datasets built from PubMed articles in AnimalQTLdb, linked
+            to the <b>Clinical Measurement Ontology (CMO)</b>, the <b>Vertebrate Trait Ontology (VT)</b> and the
+            <b>Livestock Product Trait Ontology (LPT)</b>. Far more of their mentions share no words with their entity,
+            and the ontologies list far fewer synonyms.</p>
+        <div class="paper-table-wrap">
+            <table class="paper-table">
+                <thead><tr><th>Dataset</th><th>Ontology</th><th>Samples</th><th>Unique mentions</th><th>Unique entities</th><th>No-overlap %</th><th>Synonyms / entity</th></tr></thead>
+                <tbody>
+                    <tr><td>NCBI Disease</td><td>MEDIC</td><td>960</td><td>287</td><td>190</td><td>22.92</td><td>9.57</td></tr>
+                    <tr><td>BC5CDR</td><td>MeSH</td><td>9,465</td><td>2,084</td><td>1,267</td><td>24.16</td><td>2.13</td></tr>
+                    <tr><td>QTL-CMO <span class="mine-tag">new</span></td><td>CMO</td><td>2,032</td><td>458</td><td>107</td><td>43.45</td><td>1.07</td></tr>
+                    <tr><td>QTL-VT <span class="mine-tag">new</span></td><td>VT</td><td>1,688</td><td>500</td><td>111</td><td>57.11</td><td>0.91</td></tr>
+                    <tr><td>QTL-LPT <span class="mine-tag">new</span></td><td>LPT</td><td>722</td><td>233</td><td>103</td><td>45.01</td><td>0.89</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="paper-section" id="results">
+        <h2>Results</h2>
+        <p>Fine-tuning on Sci-ZSEL pseudo-pairs plus curated synonyms improves every backbone on all five datasets. The
+            gains are largest when the mention and entity share <b>no words</b>, up to +49.12 points.</p>
+
+        <div class="viz-controls">
+            <div class="proj-toggle" data-group="subset" aria-label="Mention subset">
+                <button type="button" class="is-active" data-value="no">No word overlap</button>
+                <button type="button" data-value="all">All mentions</button>
+            </div>
+            <div class="proj-toggle" data-group="metric" aria-label="Model and metric">
+                <button type="button" class="is-active" data-value="blink">BLINK R@1</button>
+                <button type="button" data-value="res">ReS R@1</button>
+                <button type="button" data-value="ret">Retriever R@64</button>
+            </div>
+        </div>
+        <div class="viz-legend">
+            <span><i style="background:#b9c2cb"></i>No fine-tuning</span>
+            <span><i style="background:var(--accent)"></i>Sci-ZSEL + Synonym</span>
+        </div>
+        <div id="viz" aria-live="polite"></div>
+        <p class="paper-caption">Means over three seeds. Reranker numbers from Table 5; retriever numbers (PC-POS sampling) from Tables 4 and 12.</p>
+
+        <details>
+            <summary>Show as table</summary>
+            <div class="paper-table-wrap">
+                <table class="paper-table">
+                    <thead><tr><th>Dataset</th><th>No fine-tuning</th><th>Sci-ZSEL + Synonym</th><th>Gain</th></tr></thead>
+                    <tbody id="viz-table"></tbody>
+                </table>
+            </div>
+        </details>
+    </section>
+
+    <section class="paper-section" id="cite">
+        <h2>Citation</h2>
+        <div class="bib-wrap">
+            <button type="button" class="proj-link bib-copy" id="bib-copy"><i class="fa fa-clipboard" aria-hidden="true"></i> Copy</button>
+<pre id="bibtex">@inproceedings{khondokar-etal-2026-bridging,
+  title     = {Bridging Lexical Divergence: {LLM}-Assisted, Cost-Efficient, Zero-shot Scientific Entity Linking},
+  author    = {Khondokar, Md Rasel and Qiao, Qiao and Samia, Farjana Sultana and Le, Nhat and Li, Yuepei and Li, Qi},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026},
+  pages     = {27231--27249},
+  publisher = {Association for Computational Linguistics}
+}</pre>
+        </div>
+    </section>
+
+    <p class="paper-foot">This page summarizes the paper and my part in it. The full project page, talk and poster are
+        on the <a href="https://rasel-isu.github.io/research/sci-zsel.html" target="_blank" rel="noopener">first author's site</a>.
+        The work was supported in part by NSF-CAREER #2237831 and USDA-NIFA #2024-08585.</p>
+</main>
+
+<script>
+(function () {
+    var D = ['NCBI', 'BC5CDR', 'QTL-CMO', 'QTL-VT', 'QTL-LPT'];
+    // [no fine-tune, Sci-ZSEL + Synonym] per dataset, from the paper
+    var DATA = {
+        blink: { all: [[64.38, 77.43], [74.36, 81.20], [50.15, 58.88], [43.13, 71.25], [57.34, 80.70]],
+                 no:  [[23.64, 61.67], [22.43, 46.87], [29.67, 36.88], [31.43, 64.04], [20.62, 69.74]] },
+        res:   { all: [[45.94, 70.52], [32.65, 77.90], [48.92, 57.43], [38.33, 65.58], [59.70, 81.21]],
+                 no:  [[18.64, 63.79], [12.42, 41.66], [31.37, 32.31], [19.71, 55.53], [27.69, 70.26]] },
+        ret:   { all: [[88.12, 90.80], [88.79, 89.14], [75.74, 89.09], [72.63, 87.99], [68.70, 92.66]],
+                 no:  [[62.73, 76.37], [57.24, 59.38], [55.04, 76.52], [59.96, 83.44], [35.38, 87.38]] }
+    };
+    var state = { subset: 'no', metric: 'blink' };
+    var viz = document.getElementById('viz');
+    var tbody = document.getElementById('viz-table');
+
+    function bar(v, ours) {
+        return '<div class="viz-bar' + (ours ? ' is-ours' : '') + '"><span class="proj-bar-track"><span class="proj-bar-fill" style="width:' +
+            v + '%"></span></span><span class="proj-bar-val">' + v.toFixed(2) + '</span></div>';
+    }
+    function render() {
+        var rows = DATA[state.metric][state.subset];
+        viz.innerHTML = rows.map(function (r, i) {
+            return '<div class="viz-row"><span class="viz-name">' + D[i] + '</span><div class="viz-bars">' + bar(r[0], false) + bar(r[1], true) + '</div></div>';
+        }).join('');
+        tbody.innerHTML = rows.map(function (r, i) {
+            var g = r[1] - r[0];
+            return '<tr><td>' + D[i] + '</td><td>' + r[0].toFixed(2) + '</td><td>' + r[1].toFixed(2) + '</td><td>' + (g >= 0 ? '+' : '') + g.toFixed(2) + '</td></tr>';
+        }).join('');
+    }
+    document.querySelectorAll('.proj-toggle[data-group]').forEach(function (grp) {
+        grp.addEventListener('click', function (ev) {
+            var b = ev.target.closest('button');
+            if (!b) return;
+            grp.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-active', x === b); });
+            state[grp.getAttribute('data-group')] = b.getAttribute('data-value');
+            render();
+        });
+    });
+    render();
+
+    document.getElementById('bib-copy').addEventListener('click', function () {
+        var btn = this, text = document.getElementById('bibtex').textContent;
+        function done() { btn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Copied'; setTimeout(function () { btn.innerHTML = '<i class="fa fa-clipboard" aria-hidden="true"></i> Copy'; }, 1600); }
+        if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done, function () {}); }
+    });
+
+    document.querySelectorAll('.proj-figure img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            var box = document.createElement('div');
+            box.className = 'proj-lightbox';
+            box.innerHTML = '<img src="' + img.src + '" alt="">';
+            box.addEventListener('click', function () { box.remove(); });
+            document.body.appendChild(box);
+        });
+    });
+})();
+</script>
+
+
+<!--footer parts start -->
+<footer class="site-footer" id="contact">
+    <div class="container">
+        <div class="talk-card">
+        <div class="talk-intro">
+            <h2 class="talk-title">Let&rsquo;s talk.</h2>
+            <p class="talk-text">I&rsquo;m looking for <strong>Summer 2027</strong> research or applied-science
+                internships in ML, NLP and LLMs, available <strong>May 20 &ndash; Aug 30, 2027</strong>.
+                I&rsquo;m also happy to discuss research collaborations.</p>
+            <div class="footer-social">
+                    <a href="mailto:fssamia@iastate.edu" title="Email" aria-label="Email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/farjanasultanasamia/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/Samia-00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@FarjanaSultanaSamia" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100011271017947" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+        </div>
+        <ul class="talk-links">
+            <li><a href="mailto:fssamia@iastate.edu"><i class="fa fa-envelope-o" aria-hidden="true"></i>fssamia@iastate.edu</a></li>
+            <li><a href="mailto:samia.cse.miu@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>samia.cse.miu@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/farjanasultanasamia/" target="_blank" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i>linkedin.com/in/farjanasultanasamia</a></li>
+            <li><a href="https://github.com/Samia-00" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>github.com/Samia-00</a></li>
+            <li><a href="https://scholar.google.com/citations?user=7vd2GjoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a></li>
+            <li><span><i class="fa fa-map-marker" aria-hidden="true"></i>Ames, Iowa, USA</span></li>
+        </ul>
+        </div>
+
+        <div class="site-footer-bottom">
+            <p>&copy; 2026 Farjana Sultana Samia. All rights reserved.</p>
+            <a class="footer-totop" href="#">Back to top &uarr;</a>
+        </div>
+    </div>
+</footer>
+<!--end footer part-->
+    
+    
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('.go-top').fadeIn(200);
+            } else {
+                $('.go-top').fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $('.go-top').click(function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({scrollTop: 0}, 1500);
+        })
+    });
+
+</script>
+
+<script src="js/footer-reveal.js" defer></script>
+</body>
+</html>
