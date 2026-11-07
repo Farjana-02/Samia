@@ -25,6 +25,7 @@
 
 
 <body id="education">
+<a class="side-status" href="index.html#contact" aria-label="Open to work: Summer 2027 internships"><span class="side-status-top"><span class="hero-status-dot" aria-hidden="true"></span>Open to work</span><span class="side-status-big">Summer<br/>2027</span><span class="side-status-sub">Internships</span></a>
 <!--navigation start here-->
 <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg container">
@@ -44,9 +45,9 @@
                             <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
                             <li><a class="site-menu-link" href="research.html">Research Experience</a></li>
                             <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
-                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
                             <li><a class="site-menu-link" href="extracurricular.html">Outreach</a></li>
                             <li><a class="site-menu-link" href="skills.html">Skills</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
                         </ul>
         </div>
     </nav>
@@ -120,7 +121,7 @@
         <div class="col-md-12 text-justify">
             <h4><img alt='' src='img/lister.png' width='15'/> Education</h4>
             <br>
-        <ul class="edu-list">
+        <ul class="edu-list edu-timeline">
             <li class="edu-card">
                 <div class="edu-logo">
                     <img src="img/isu.png" alt="Iowa State University">
@@ -154,14 +155,11 @@
                     <div class="edu-meta">
                         <span class="edu-period">Feb 2017 &ndash; Dec 2021</span>
                         <span class="edu-grade">CGPA 3.90 / 4.00</span>
+                        <span class="edu-chip"><i class="fa fa-trophy" aria-hidden="true"></i>1st of 48 &middot; Distinction</span>
                     </div>
                     <div class="edu-detail">
                         <span class="edu-label">Undergraduate thesis</span>
                         Prediction of COVID-19 from Chest X-ray Images Using CNN and Pre-Trained Models
-                    </div>
-                    <div class="edu-detail">
-                        <span class="edu-label">Student ID</span>
-                        1743CSE00584
                     </div>
                     <div class="edu-detail">
                         <span class="edu-label">Relevant coursework</span>
@@ -302,5 +300,18 @@
 </script>
 
 <script src="js/footer-reveal.js" defer></script>
+<script>
+(function () {
+    var cards = document.querySelectorAll('.edu-timeline .edu-card');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('edu-anim');
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+    }, { threshold: 0.12 });
+    cards.forEach(function (c, i) { c.style.transitionDelay = (i * 80) + 'ms'; io.observe(c); });
+})();
+</script>
 </body>
 </html>

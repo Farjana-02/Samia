@@ -24,6 +24,7 @@
 
 
 <body id="research">
+<a class="side-status" href="index.html#contact" aria-label="Open to work: Summer 2027 internships"><span class="side-status-top"><span class="hero-status-dot" aria-hidden="true"></span>Open to work</span><span class="side-status-big">Summer<br/>2027</span><span class="side-status-sub">Internships</span></a>
 <!--navigation start here-->
 <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg container">
@@ -43,9 +44,9 @@
                             <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
                             <li class="is-active"><a class="site-menu-link" href="research.html" aria-current="page">Research Experience</a></li>
                             <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
-                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
                             <li><a class="site-menu-link" href="extracurricular.html">Outreach</a></li>
                             <li><a class="site-menu-link" href="skills.html">Skills</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
                         </ul>
         </div>
     </nav>
@@ -118,9 +119,9 @@
 
     <div class="row">
         <div class="col-md-12 text-justify">
-            <h4><img alt='' src='img/lister.png' width='15'/> Publications</h4>
+            <h4 id="res-pubs" class="exp-section"><img alt='' src='img/lister.png' width='15'/> Publications</h4>
             <br>
-        <ul class="proj-list">
+        <ul class="proj-list exp-timeline">
             <li class="proj-card proj-card-featured">
                 <div class="proj-head">
                     <h5 class="proj-title">Bridging Lexical Divergence: LLM-Assisted, Cost-Efficient,
@@ -132,13 +133,26 @@
                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a>
                         <a class="proj-link" href="https://arxiv.org/abs/2609.00228" target="_blank" rel="noopener">
                             <i class="fa fa-external-link" aria-hidden="true"></i> arXiv</a>
+                    <button type="button" class="proj-link pub-cite" aria-expanded="false" aria-controls="pub-bib-1">
+                        <i class="fa fa-quote-right" aria-hidden="true"></i> Cite</button>
                     </div>
                 </div>
                 <p class="pub-authors">
                     Md Rasel Khondokar, Qiao Qiao, <span class="pub-me">Farjana Sultana Samia</span>,
                     Nhat Le, Yuepei Li, Qi Li
                 </p>
-                <span class="pub-venue">Findings of EMNLP 2026</span>
+                <span class="pub-venue">EMNLP 2026</span>
+                <div class="pub-bib" id="pub-bib-1">
+                    <button type="button" class="pub-bib-copy">Copy</button>
+<pre>@inproceedings{khondokar-etal-2026-bridging,
+  title     = {Bridging Lexical Divergence: {LLM}-Assisted, Cost-Efficient, Zero-shot Scientific Entity Linking},
+  author    = {Khondokar, Md Rasel and Qiao, Qiao and Samia, Farjana Sultana and Le, Nhat and Li, Yuepei and Li, Qi},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026},
+  pages     = {27231--27249},
+  publisher = {Association for Computational Linguistics}
+}</pre>
+                </div>
                 <ul class="exp-bullets" style="margin-top: 1.15rem;">
                     <li>Introduces <b>Sci-ZSEL</b>, a zero-shot entity linking framework that generates entity
                         aliases with large language models, filters noisy generations, and builds pseudo-labeled
@@ -167,9 +181,9 @@
             </li>
         </ul>
             <br>
-            <h4><img alt='' src='img/lister.png' width='15'/> Current Research</h4>
+            <h4 id="res-current" class="exp-section"><img alt='' src='img/lister.png' width='15'/> Current Research</h4>
             <br>
-        <ul class="proj-list">
+        <ul class="proj-list exp-timeline">
             <li class="proj-card">
                 <div class="proj-head">
                     <h5 class="proj-title">Natural Language Processing &mdash; Data and Knowledge Mining Lab,
@@ -200,9 +214,9 @@
             </li>
         </ul>
             <br>
-            <h4><img alt='' src='img/lister.png' width='15'/> Previous Research</h4>
+            <h4 id="res-previous" class="exp-section"><img alt='' src='img/lister.png' width='15'/> Previous Research</h4>
             <br>
-        <ul class="proj-list">
+        <ul class="proj-list exp-timeline">
             <li class="proj-card">
                 <div class="proj-head">
                     <h5 class="proj-title">Prediction of COVID-19 from Chest X-ray Images Using CNN and
@@ -341,5 +355,31 @@
 </script>
 
 <script src="js/footer-reveal.js" defer></script>
+<script>
+(function () {
+    document.querySelectorAll('.pub-cite').forEach(function (btn) {
+        var box = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.addEventListener('click', function () {
+            btn.setAttribute('aria-expanded', box.classList.toggle('is-open'));
+        });
+        var copy = box.querySelector('.pub-bib-copy');
+        copy.addEventListener('click', function () {
+            if (!navigator.clipboard) return;
+            navigator.clipboard.writeText(box.querySelector('pre').textContent).then(function () {
+                copy.textContent = 'Copied';
+                setTimeout(function () { copy.textContent = 'Copy'; }, 1500);
+            });
+        });
+    });
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('exp-anim');
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.exp-timeline .proj-card').forEach(function (c) { io.observe(c); });
+})();
+</script>
 </body>
 </html>

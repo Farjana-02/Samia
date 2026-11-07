@@ -24,6 +24,7 @@
 
 
 <body id="exp">
+<a class="side-status" href="index.html#contact" aria-label="Open to work: Summer 2027 internships"><span class="side-status-top"><span class="hero-status-dot" aria-hidden="true"></span>Open to work</span><span class="side-status-big">Summer<br/>2027</span><span class="side-status-sub">Internships</span></a>
 <!--navigation start here-->
 <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg container">
@@ -43,9 +44,9 @@
                             <li class="is-active"><a class="site-menu-link" href="Experience.html" aria-current="page">Experience</a></li>
                             <li><a class="site-menu-link" href="research.html">Research Experience</a></li>
                             <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
-                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
                             <li><a class="site-menu-link" href="extracurricular.html">Outreach</a></li>
                             <li><a class="site-menu-link" href="skills.html">Skills</a></li>
+                            <li><a class="site-menu-link" href="affiliation.html">Certifications</a></li>
                         </ul>
         </div>
     </nav>
@@ -117,9 +118,16 @@
 
     <div class="row">
         <div class="col-md-12 text-justify">
-            <h4><img alt='' src='img/lister.png' width='15'/> Research Experience</h4>
+            <div class="exp-overview">
+                <nav class="exp-jump" aria-label="Experience sections">
+                    <a href="#exp-research"><i class="fa fa-flask" aria-hidden="true"></i>Research</a>
+                    <a href="#exp-teaching"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Teaching</a>
+                    <a href="#exp-industry"><i class="fa fa-briefcase" aria-hidden="true"></i>Industry</a>
+                </nav>
+            </div>
+            <h4 id="exp-research" class="exp-section"><img alt='' src='img/lister.png' width='15'/> Research Experience</h4>
             <br>
-        <ul class="exp-list">
+        <ul class="exp-list exp-timeline">
             <li class="exp-card">
                 <div class="exp-logo"><img src="img/isu.png" alt="Iowa State University"></div>
                 <div class="exp-body">
@@ -136,7 +144,7 @@
                         <span class="exp-label">Role</span>
                         <ul class="exp-bullets">
                             <li>Research Assistant on an NSF-funded project, advised by
-                                <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Dr. Qi Li</a>.</li>
+                                <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Qi Li</a>.</li>
                             <li>Design and curate multi-source study datasets, including large language model
                                 interaction logs, structured behavioral event logs in JSON, and participant
                                 performance records.</li>
@@ -165,9 +173,9 @@
             </li>
         </ul>
             <br>
-            <h4><img alt='' src='img/lister.png' width='15'/> Teaching Experience</h4>
+            <h4 id="exp-teaching" class="exp-section"><img alt='' src='img/lister.png' width='15'/> Teaching Experience</h4>
             <br>
-        <ul class="exp-list">
+        <ul class="exp-list exp-timeline">
             <li class="exp-card">
                 <div class="exp-logo"><img src="img/isu.png" alt="Iowa State University"></div>
                 <div class="exp-body">
@@ -176,6 +184,11 @@
                         <span class="exp-period">January 2024 &ndash; Present</span>
                     </div>
                     <p class="exp-org">Department of Computer Science, Iowa State University</p>
+                    <div class="exp-badges">
+                        <span class="exp-badge">5 courses</span>
+                        <span class="exp-badge">7 semesters</span>
+                        <span class="exp-badge">Foundational AI course resources</span>
+                    </div>
                     <div class="exp-block">
                         <span class="exp-label">Courses</span>
                         <ul class="exp-courses">
@@ -201,8 +214,8 @@
                                 <span class="exp-course-name">
                                     <span class="exp-course-code">COM S 3710X / 3720X</span> &mdash; Introduction to Foundational AI Models I &amp; II
                                     <span class="exp-course-note">Course resource development for
-                                        <a href="https://www.cs.iastate.edu/people/wei-le" target="_blank" rel="noopener">Prof. Dr. Wei Le</a> and
-                                        <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Dr. Qi Li</a></span>
+                                        <a href="https://www.cs.iastate.edu/people/wei-le" target="_blank" rel="noopener">Prof. Wei Le</a> and
+                                        <a href="https://faculty.sites.iastate.edu/qli/" target="_blank" rel="noopener">Prof. Qi Li</a></span>
                                 </span>
                                 <span class="exp-terms">Summer 2026</span>
                             </li>
@@ -246,9 +259,9 @@
             </li>
         </ul>
             <br>
-            <h4><img alt='' src='img/lister.png' width='15'/> Industry Experience</h4>
+            <h4 id="exp-industry" class="exp-section"><img alt='' src='img/lister.png' width='15'/> Industry Experience</h4>
             <br>
-        <ul class="exp-list">
+        <ul class="exp-list exp-timeline">
             <li class="exp-card">
                 <div class="exp-logo"><img src="img/tml.png" alt="Technometrics Limited"></div>
                 <div class="exp-body">
@@ -257,6 +270,11 @@
                         <span class="exp-period">December 2022 &ndash; December 2023</span>
                     </div>
                     <p class="exp-org">Technometrics Limited, Dhaka, Bangladesh</p>
+                    <div class="exp-badges">
+                        <span class="exp-badge">85% accuracy &middot; 17 topics</span>
+                        <span class="exp-badge">25 blogs + 15 news portals</span>
+                        <span class="exp-badge">Production NLP</span>
+                    </div>
                     <div class="exp-block">
                         <span class="exp-label">Responsibilities</span>
                         <ul class="exp-bullets">
@@ -377,5 +395,30 @@
     </script>
     
     <script src="js/footer-reveal.js" defer></script>
+<script>
+(function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Section jump pills: highlight the section in view
+    var links = document.querySelectorAll('.exp-jump a');
+    var heads = document.querySelectorAll('.exp-section');
+    function spy() {
+        var cur = heads[0].id;
+        heads.forEach(function (h) { if (h.getBoundingClientRect().top < 200) cur = h.id; });
+        links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('href') === '#' + cur); });
+    }
+    window.addEventListener('scroll', spy, { passive: true });
+    spy();
+    if (!('IntersectionObserver' in window) || reduce) return;
+    document.documentElement.classList.add('exp-anim');
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.exp-timeline .exp-card').forEach(function (c) { io.observe(c); });
+})();
+</script>
 </body>
     </html>

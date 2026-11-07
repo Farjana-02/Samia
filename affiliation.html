@@ -24,6 +24,7 @@
 
 
 <body id="affiliation">
+<a class="side-status" href="index.html#contact" aria-label="Open to work: Summer 2027 internships"><span class="side-status-top"><span class="hero-status-dot" aria-hidden="true"></span>Open to work</span><span class="side-status-big">Summer<br/>2027</span><span class="side-status-sub">Internships</span></a>
 <!--navigation start here-->
 <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg container">
@@ -43,9 +44,9 @@
                             <li><a class="site-menu-link" href="Experience.html">Experience</a></li>
                             <li><a class="site-menu-link" href="research.html">Research Experience</a></li>
                             <li><a class="site-menu-link" href="research_project.html">Projects</a></li>
-                            <li class="is-active"><a class="site-menu-link" href="affiliation.html" aria-current="page">Certifications</a></li>
                             <li><a class="site-menu-link" href="extracurricular.html">Outreach</a></li>
                             <li><a class="site-menu-link" href="skills.html">Skills</a></li>
+                            <li class="is-active"><a class="site-menu-link" href="affiliation.html" aria-current="page">Certifications</a></li>
                         </ul>
         </div>
     </nav>
@@ -121,6 +122,7 @@
         <div class="col-md-12 text-justify">
             <h4><img alt='' src='img/lister.png' width='15'/> Certifications</h4>
             <br>
+        <h5 class="tool-group cert-group"><i class="fa fa-book" aria-hidden="true"></i> Courses &amp; technical training</h5>
         <ul class="cert-grid">
             <li class="cert-card">
                 <a class="cert-thumb" href="documents/cert-python-data-science-ai-development-ibm.pdf" target="_blank" rel="noopener">
@@ -143,7 +145,7 @@
                     <h5 class="cert-title">Machine Learning</h5>
                     <p class="cert-issuer">Issued by <a href="https://www.ishraak.com/" target="_blank" rel="noopener">Ishraak Solutions Limited</a></p>
                     <div class="cert-foot">
-                        <span class="cert-date">Certificate</span>
+                        <span class="cert-date">Mar 2020</span>
                     </div>
                 </div>
             </li>
@@ -172,6 +174,9 @@
                     </div>
                 </div>
             </li>
+        </ul>
+        <h5 class="tool-group cert-group"><i class="fa fa-trophy" aria-hidden="true"></i> Recognition &amp; participation</h5>
+        <ul class="cert-grid">
             <li class="cert-card">
                 <a class="cert-thumb" href="img/mic.jpg" target="_blank" rel="noopener">
                     <img src="img/mic.jpg" alt="Brand Ambassador at Microsoft certificate">
@@ -180,7 +185,7 @@
                     <h5 class="cert-title">Brand Ambassador at Microsoft</h5>
                     <p class="cert-issuer">Issued by <a href="https://www.microsoft.com/en-us/contact_bn-bd.aspx" target="_blank" rel="noopener">Microsoft Bangladesh</a></p>
                     <div class="cert-foot">
-                        <span class="cert-date">Certificate</span>
+                        <span class="cert-date">2018</span>
                     </div>
                 </div>
             </li>
@@ -189,9 +194,10 @@
                     <img src="img/certificate.jpg" alt="Programming Contest certificate">
                 </a>
                 <div class="cert-body">
-                    <h5 class="cert-title">Programming Contest</h5>
+                    <h5 class="cert-title">NSU Inter University Girls&rsquo; Programming Contest</h5>
+                        <p class="cert-issuer">Certificate of participation &middot; North South University</p>
                     <div class="cert-foot">
-                        <span class="cert-date">Certificate</span>
+                        <span class="cert-date">2018</span>
                     </div>
                 </div>
             </li>
@@ -284,5 +290,17 @@
     </script>
     
     <script src="js/footer-reveal.js" defer></script>
+<script>
+(function () {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('cert-anim');
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.cert-card').forEach(function (c, i) { c.style.transitionDelay = (i % 3) * 70 + 'ms'; io.observe(c); });
+})();
+</script>
 </body>
     </html>
